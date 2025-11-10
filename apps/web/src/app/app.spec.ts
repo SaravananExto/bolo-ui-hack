@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+
 import { App } from './app';
 import { NxWelcome } from './nx-welcome';
 
@@ -9,10 +10,10 @@ describe('App', () => {
     }).compileComponents();
   });
 
-  it('should render title', () => {
+  it('should render hero banner title', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome web');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome to Bolo');
   });
 });

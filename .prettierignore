@@ -1,6 +1,21 @@
 # Add files here to ignore them from prettier formatting
+
+# Build output
 /dist
 /coverage
+
+# Nx workspace data
 /.nx/cache
 /.nx/workspace-data
+
+# Dependencies
+/node_modules
+
+# Temporary files
+/tmp
+
+# Configuration and lock files
+package-lock.json
+
+# Angular
 .angular
