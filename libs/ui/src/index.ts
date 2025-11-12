@@ -1,1 +1,2 @@
-export * from './lib/components/hero-banner/hero-banner';
+export * from './lib/components';
+export * from './lib/elements';

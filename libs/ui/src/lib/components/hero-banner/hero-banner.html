@@ -1,9 +1,16 @@
 <!--
-  Responsive hero banner using TailwindCSS.
+  Responsive hero banner using SCSS.
   Semantic HTML and accessibility best practices.
 -->
 <section class="hero-banner-section" aria-label="Hero Banner">
-  <h1 class="hero-banner-title">{{ title() }}</h1>
-  <p class="hero-banner-subtitle">{{ subtitle() }}</p>
-  <ui-elm-button [text]="buttonText()" ariaLabel="Call to action"></ui-elm-button>
+  <div class="hero-banner-lang-pallet">
+    @for (lng of ['en', 'fr', 'es', 'kn', 'ta', 'te']; track lng) {
+    <ui-elm-button
+      [text]="'hero.button.' + getLangKey(lng)"
+      (click)="switchLocale(lng)"
+    ></ui-elm-button>
+    }
+  </div>
+  <h1 class="hero-banner-title">{{ title() |translate}}</h1>
+  <p class="hero-banner-subtitle">{{ subtitle() | translate }}</p>
 </section>

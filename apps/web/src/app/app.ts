@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeroBanner } from '@bolo/ui';
+import { HeroBanner } from '@bolo/ui/components';
 
 import { NxWelcome } from './nx-welcome';
 

@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bolo/ui": ["libs/ui/src/index.ts"],
-      "@bolo/core": ["libs/core/src/index.ts"],
-      "@bolo/shared": ["libs/shared/src/index.ts"]
+      "@bolo/ui/*": ["libs/ui/src/lib/*"],
+      "@bolo/core/*": ["libs/core/src/lib/*"],
+      "@bolo/shared/*": ["libs/shared/src/lib/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { TranslatePipe } from '@bolo/shared/i18n/pipes';
 
 /**
  * Standalone, accessible, and reusable button component.
@@ -7,6 +8,7 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 @Component({
   selector: 'ui-elm-button',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './button.html',
   styleUrl: './button.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
