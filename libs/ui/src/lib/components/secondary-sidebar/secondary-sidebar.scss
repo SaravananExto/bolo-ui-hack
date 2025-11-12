@@ -1,0 +1,37 @@
+.sidebar {
+  background-color: #353535;
+}
+
+.sidebar {
+  width: 74px;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-block: 24px;
+  align-items: center;
+  gap: 18px;
+}
+
+.username-container {
+  width: 52px;
+  height: 52px;
+  background-color: #4468fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+}
+
+.username-title {
+  margin: 0;
+  color: #fff;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.settings-container {
+  margin-top: auto;
+}

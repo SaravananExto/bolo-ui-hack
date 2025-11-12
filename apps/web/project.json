@@ -15,12 +15,13 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/web/tsconfig.app.json",
         "assets": [
+          "apps/web/src/assets",
           {
             "glob": "**/*",
             "input": "apps/web/public"
           }
         ],
-        "styles": ["apps/web/src/styles.css"]
+        "styles": ["apps/web/src/styles.scss"]
       },
       "configurations": {
         "production": {
