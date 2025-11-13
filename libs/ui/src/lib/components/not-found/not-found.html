@@ -1,0 +1,30 @@
+<div class="not-found not-found--fullscreen">
+  <div class="not-found__center">
+    <div class="not-found__illustration">
+      <!-- Example SVG illustration -->
+      <svg width="96" height="96" viewBox="0 0 96 96" fill="none">
+        <circle
+          cx="48"
+          cy="48"
+          r="44"
+          stroke="var(--nf-accent, #6366f1)"
+          stroke-width="8"
+          fill="var(--nf-bg, #f8f8f8)"
+        />
+        <text
+          x="50%"
+          y="54%"
+          text-anchor="middle"
+          fill="var(--nf-accent, #6366f1)"
+          font-size="32"
+          font-family="inherit"
+          dy=".3em"
+        >
+          404
+        </text>
+      </svg>
+    </div>
+    <div class="not-found__message">{{ message() }}</div>
+    <button class="not-found__cta" type="button" (click)="onGoHome()">Go Home</button>
+  </div>
+</div>

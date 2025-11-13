@@ -1,0 +1,4 @@
+// Mixin for CSS variable fallback
+@mixin themed($property, $var, $fallback) {
+  #{$property}: var(#{$var}, #{$fallback});
+}

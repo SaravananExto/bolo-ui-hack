@@ -1,0 +1,15 @@
+:root,
+[data-theme] {
+  transition: background 0.2s, color 0.2s;
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme] {
+  --bg: inherit;
+  --text: inherit;
+  --primary: inherit;
+  --accent: inherit;
+  --surface: inherit;
+  --shadow: inherit;
+}

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
-import { TranslationService } from '@bolo/core/i18n/services';
-import { TranslatePipe } from '@bolo/shared/i18n/pipes';
+import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
+import { TranslationService } from '@bolo/shared-core/i18n/services';
 
 import { Button } from '../../elements/button/button';
 
@@ -17,9 +17,8 @@ import { Button } from '../../elements/button/button';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroBanner {
-  title = input<string>('');
-  subtitle = input<string>('');
-  buttonText = input<string>('');
+  title = input<string>('hero.title');
+  subtitle = input<string>('hero.subtitle');
 
   private translation = inject(TranslationService);
 
