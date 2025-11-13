@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ChatWindow, PrimarySidebar, SecondarySidebar } from '@bolo/ui/components';
+import { ThemeService } from '@bolo/shared-core/theme/services';
 
 @Component({
-  imports: [PrimarySidebar, SecondarySidebar, ChatWindow, RouterModule],
+  imports: [RouterModule],
   standalone: true,
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
+export class App implements OnInit {
+  private themeService = inject(ThemeService);
+
   protected title = 'web';
+
+  ngOnInit() {
+    this.themeService.init();
+  }
 }

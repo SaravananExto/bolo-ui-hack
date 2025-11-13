@@ -15,9 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bolo/ui/*": ["libs/ui/src/lib/*"],
+      "@bolo/common/*": ["libs/common/src/lib/*"],
       "@bolo/core/*": ["libs/core/src/lib/*"],
-      "@bolo/shared/*": ["libs/shared/src/lib/*"]
+      "@bolo/shared/*": ["libs/shared/src/lib/*"],
+      "@bolo/ui/*": ["libs/ui/src/lib/*"],
+      "@bolo/shared-core/*": ["libs/shared-core/src/lib/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

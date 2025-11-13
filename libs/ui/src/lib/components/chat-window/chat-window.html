@@ -48,6 +48,27 @@
         <p class="chat-window__greetings-sub-text">89°F with clear skies in Fort Worth, TX</p>
       </div>
     </div>
+    <!-- Theme switcher and scoped theme root -->
+    <div class="chat-window-root" [attr.data-theme]="themeService.currentThemeName()">
+      <select (change)="setTheme($event.target)" style="margin-bottom: 16px">
+        @for (t of ['QUANTUM','GRAPHITE','EXOSTEEL','JADEUS','ONYX']; track t) {
+        <option [value]="t" [selected]="themeService.currentThemeName() === t">{{ t }}</option>
+        }
+      </select>
+      <div class="chat-content">
+        <!-- Example usage of CSS variables -->
+        <div
+          class="chat-bubble"
+          style="
+            background: var(--surface);
+            color: var(--text);
+            box-shadow: 0 2px 8px var(--shadow);
+          "
+        >
+          Chat message here...
+        </div>
+      </div>
+    </div>
     <div class="chat-window__search">
       <div class="chat-window__plus-icon-container">
         <svg

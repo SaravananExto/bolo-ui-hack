@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ThemeService } from '@bolo/shared-core/theme/services';
 
 @Component({
   selector: 'ui-cmp-chat-window',
@@ -8,9 +9,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChatWindow {
-  messages = Array.from({ length: 10 }, (_, i) => ({
-    id: i,
-    botText: `Hello! How can I help you today? (#${i + 1})`,
-    userText: `Hello. (#${i + 1})`,
-  }));
+  themeService = inject(ThemeService);
+  themeName = signal(this.themeService.currentThemeName());
+
+  setTheme(target: EventTarget | null) {
+    const name =
+      target && typeof target === 'object' && 'value' in target
+        ? (target as HTMLSelectElement).value
+        : null;
+    if (name) {
+      this.themeService.applyTheme(name);
+      this.themeName.set(name);
+    }
+  }
 }

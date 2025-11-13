@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { TranslatePipe } from '@bolo/shared/i18n/pipes';
+import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { ButtonModule } from 'primeng/button';
 
 /**
