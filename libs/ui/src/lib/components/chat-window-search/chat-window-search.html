@@ -1,0 +1,26 @@
+<div class="chat-search">
+  <div class="chat-search__button chat-search__button--plus">
+    <button (click)="menu.toggle($event)">
+      <i class="pi pi-plus plus-icon"></i>
+    </button>
+  </div>
+
+  <div class="chat-search__input-wrapper">
+    <input class="chat-search__input" placeholder="Message Bolo" />
+  </div>
+
+  <div class="chat-search__button chat-search__button--send">
+    <button>
+      <img alt="Send" src="assets/images/send-icon.svg" />
+    </button>
+  </div>
+</div>
+
+<p-menu #menu [model]="items" [popup]="true" styleClass="chat-search__menu">
+  <ng-template #item let-item>
+    <a pRipple class="menu-item-link">
+      <img [alt]="item.label" [src]="'assets/images/' + item.icon" />
+      <span class="menu-item-label">{{ item.label }}</span>
+    </a>
+  </ng-template>
+</p-menu>

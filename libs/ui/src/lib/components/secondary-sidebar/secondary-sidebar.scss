@@ -1,8 +1,5 @@
-.sidebar {
+.chat-sidebar {
   background-color: #353535;
-}
-
-.sidebar {
   width: 74px;
   height: 100dvh;
   display: flex;
@@ -12,7 +9,8 @@
   gap: 18px;
 }
 
-.username-container {
+/* USER SECTION */
+.chat-sidebar__user {
   width: 52px;
   height: 52px;
   background-color: #4468fd;
@@ -22,16 +20,72 @@
   border-radius: 60px;
 }
 
-.username-title {
+.chat-sidebar__user-avatar {
   margin: 0;
   color: #fff;
   font-family: Arial;
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
-.settings-container {
+/* MENU BUTTON */
+.chat-sidebar__menu-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* SETTINGS SECTION */
+.chat-sidebar__settings {
   margin-top: auto;
+}
+
+.chat-sidebar__settings-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* MENU DROPDOWN */
+:host ::ng-deep .chat-sidebar__menu-dropdown {
+  &.p-menu {
+    border-radius: 10px;
+    border: 1px solid #5b5b5b;
+    background: #303030;
+  }
+
+  .p-menu-list {
+    padding: 18px;
+  }
+
+  .menu-item-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 18px;
+    padding-block: 8px;
+    padding-inline: 12px;
+    user-select: none;
+    outline: 0 none;
+  }
+
+  .menu-item-label {
+    color: #fff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.28px;
+  }
+}
+
+/* SETTINGS POPOVER OVERRIDES */
+:host ::ng-deep .chat-sidebar__settings-popover {
+  .p-popover::after,
+  .p-popover::before {
+    height: 0;
+    width: 0;
+    content: none !important;
+  }
 }

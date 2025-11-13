@@ -1,0 +1,50 @@
+<div class="chat-content">
+  @for (message of messages; track message.id) {
+  <div class="chat-message chat-message--bot">
+    <div class="chat-message__meta">9:42 AM, Oct 2</div>
+    <div class="chat-message__text">{{ message.botText }}</div>
+    <div class="chat-message__options" [class.open]="optionsOpen">
+      @if(!optionsOpen) {
+      <div class="arrow-container">
+        <button class="arrow-btn start" (click)="optionsOpen = true">
+          <img alt="Right Arrow alt" src="assets/images/arrow-right-alt-icon.svg" />
+        </button>
+      </div>
+      }
+
+      <div class="inner-buttons">
+        <button>
+          <img alt="Select Window" src="assets/images/select-window-icon.svg" />
+        </button>
+        <button>
+          <img alt="Thums Up" src="assets/images/thums-up-icon.svg" />
+        </button>
+        <button>
+          <img alt="Thums Down" src="assets/images/thums-down-icon.svg" />
+        </button>
+        <button>
+          <img alt="Favorite" src="assets/images/favorite-icon.svg" />
+        </button>
+        <button>
+          <img alt="Chat" src="assets/images/chat-icon.svg" />
+        </button>
+        <button>
+          <img alt="Auto Renew" src="assets/images/autorenew-icon.svg" />
+        </button>
+
+        <div class="arrow-container">
+          <button class="arrow-btn end" (click)="optionsOpen = false">
+            <img alt="Arrow Left alt" src="assets/images/arrow-left-alt-icon.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-message chat-message--user">
+    <div class="chat-message__bubble">
+      <div class="chat-message__text">{{ message.userText }}</div>
+    </div>
+  </div>
+  }
+</div>

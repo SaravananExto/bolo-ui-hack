@@ -1,0 +1,101 @@
+/* Root container for all chat messages */
+.chat-content {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Each chat message (bot or user) */
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Bot messages */
+.chat-message--bot {
+  align-items: flex-start;
+}
+
+.chat-message__meta {
+  color: #c2c2c2;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.chat-message--bot .chat-message__text {
+  max-width: 80%;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.36px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* User messages */
+.chat-message--user {
+  align-items: flex-end;
+}
+
+.chat-message__bubble {
+  max-width: 80%;
+  padding: 8px 16px;
+  border-radius: 18px;
+  background: #4468fd;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.chat-message--user .chat-message__text {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.18px;
+}
+
+.chat-message__options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-block-start: 8px;
+}
+
+.inner-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat-message__options.open .inner-buttons {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chat-message__options button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .arrow-btn {
+    padding-block: 1px;
+    padding-inline: 5px;
+    border-radius: 6px;
+    background-color: #353535;
+  }
+}
