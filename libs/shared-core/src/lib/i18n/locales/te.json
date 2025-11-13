@@ -6,5 +6,15 @@
   "hero.button.telugu": "తెలుగు",
   "hero.button.tamil": "తమిళం",
   "hero.button.spanish": "స్పానిష్",
-  "hero.button.french": "ఫ్రెంచ్"
+  "hero.button.french": "ఫ్రెంచ్",
+  "login.signup": "సైన్ అప్",
+  "login.button": "లాగ్ ఇన్",
+  "login.usernameOrEmail": "వినియోగదారు పేరు లేదా ఇమెయిల్",
+  "login.password": "పాస్వర్డ్",
+  "login.rememberMe": "నన్ను గుర్తుంచుకోండి",
+  "login.forgotPassword": "పాస్వర్డ్ మర్చిపోయారా?",
+  "login.orLoginWith": "లేదా దీని ద్వారా లాగిన్ అవ్వండి",
+  "reset.title": "పాస్వర్డ్‌ను రీసెట్ చేయండి",
+  "reset.sendLink": "రీసెట్ లింక్‌ను పంపండి",
+  "reset.returnToLogin": "లాగిన్‌కు తిరిగి వెళ్ళండి"
 }

@@ -1,0 +1,333 @@
+// Native select for language dropdown
+.lang-select {
+  width: 44px;
+  min-width: 44px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #fff
+    url('data:image/svg+xml;utf8,<svg fill="%234468fd" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 8px center/18px 18px;
+  color: #2946b8;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  padding: 0 28px 0 8px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border 0.18s, box-shadow 0.18s;
+  margin-left: 8px;
+}
+.lang-select:focus {
+  border-color: #4468fd;
+  box-shadow: 0 0 0 2px #e7edff;
+  outline: none;
+}
+
+.div_block_main_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/bolo_main_image_03.png');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.login-bar {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  z-index: 2;
+}
+
+.logo {
+  width: 120px !important;
+  height: 38px !important;
+}
+
+.bar-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: 100px;
+}
+
+.bar-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-right: 40px;
+}
+
+.sign-up {
+  font-family: 'Arial';
+  font-weight: 700;
+  color: #4468fd;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: inline-block;
+  width: 160px;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.login-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.login-dialog {
+  position: relative;
+  width: 450px;
+  height: 630px;
+  min-height: 600px;
+  background: #fff;
+  box-shadow: 6px 6px 30px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 36px 28px 18px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form .dialog-label,
+form .dialog-input,
+form .input-error,
+form .dialog-row,
+form .dialog-login-btn {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+form .dialog-login-btn {
+  width: 160px;
+  margin: 0 auto 22px auto;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #3a3a3a;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.dialog-title {
+  font-family: 'Arial';
+  font-size: 38px;
+  font-weight: 400;
+  color: #3a3a3a;
+  margin: 26px 0 40px 0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.dialog-label {
+  font-family: 'Arial';
+  font-size: 16px;
+  color: #3a3a3a;
+  margin-bottom: 4px;
+  align-self: flex-start;
+  margin-left: 4px;
+}
+
+.dialog-input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #939393;
+  border-radius: 14px;
+  background: #fff;
+  font-size: 16px;
+  padding: 0 14px;
+  margin-bottom: 18px;
+  font-family: 'Arial';
+  color: #3a3a3a;
+  box-sizing: border-box;
+  display: block;
+}
+
+.dialog-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.remember-me {
+  font-family: 'Arial';
+  font-size: 16px;
+  color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remember-me input[type='checkbox'] {
+  accent-color: #4468fd;
+  width: 14px;
+  height: 14px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.forgot-password {
+  font-family: 'Arial';
+  font-size: 16px;
+  color: #3a3a3a;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.22s, background 0.22s;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.forgot-password:hover,
+.forgot-password:focus {
+  color: #4468fd;
+  background: #e7edff;
+  text-decoration: underline;
+}
+
+::ng-deep .login-btn .p-button,
+::ng-deep .dialog-login-btn .p-button {
+  font-size: 1rem !important;
+  font-family: 'Arial' !important;
+  font-weight: 700 !important;
+  background: #4468fd !important;
+  border-radius: 16px !important;
+  color: #fff !important;
+  transition: background 0.22s, color 0.22s, box-shadow 0.22s, transform 0.18s !important;
+}
+::ng-deep .login-btn .p-button {
+  width: 160px !important;
+  height: 35px !important;
+}
+::ng-deep .dialog-login-btn .p-button {
+  width: 160px !important;
+  height: 44px !important;
+}
+::ng-deep .login-btn .p-button:hover,
+::ng-deep .login-btn .p-button:focus,
+::ng-deep .dialog-login-btn .p-button:hover,
+::ng-deep .dialog-login-btn .p-button:focus {
+  background: #2946b8 !important;
+  color: #e0e7ff !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 4px 18px 0 rgba(68, 104, 253, 0.13) !important;
+}
+
+.dialog-divider-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.dialog-divider {
+  flex: 1;
+  height: 1px;
+  background: #939393;
+}
+
+.dialog-or {
+  margin: 0 12px;
+  font-family: 'Arial';
+  font-size: 15px;
+  color: #3a3a3a;
+}
+
+.dialog-social-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.social-btn {
+  width: 140px;
+  min-width: 100px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #939393;
+  border-radius: 15px;
+  font-family: 'Arial';
+  font-size: 15px;
+  color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.dialog-footer {
+  font-size: 11px;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 0;
+  position: static;
+}
+
+.input-error {
+  color: #ff645f;
+  font-size: 14px;
+  margin-bottom: 8px;
+  margin-top: -10px;
+  margin-left: 8px;
+  width: 100%;
+  text-align: left;
+  font-family: 'Arial';
+}
+
+.password-input-wrapper + .input-error {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+::ng-deep .p-password .p-password-toggle-mask-icon {
+  top: 50% !important;
+  right: 12px !important;
+  transform: translateY(-40%) !important;
+}
