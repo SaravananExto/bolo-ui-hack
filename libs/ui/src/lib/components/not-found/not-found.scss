@@ -72,7 +72,7 @@ $nf-text: var(--nf-text, #222);
     transition: background 0.2s, transform 0.2s;
     &:hover,
     &:focus {
-      background: darken($nf-accent, 8%);
+      background: #4f51c6; // hardcoded darkened accent or use a SCSS variable
       transform: translateY(-2px) scale(1.04);
       outline: none;
     }
