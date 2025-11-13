@@ -1,0 +1,39 @@
+.main-container {
+  height: 100vh;
+  background: #4c4c4c;
+
+  .heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    padding-top: 7.5rem;
+    align-items: center;
+
+    .back-btn {
+      cursor: pointer;
+      padding-left: 5rem;
+    }
+
+    .title {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 300;
+      justify-self: center;
+    }
+
+  }
+
+  .meta {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 0 6rem 0 5.3rem;
+    padding-top: 7rem;
+    gap: 0.76rem
+  }
+
+  .tbl {
+    margin: 0 5rem 0 5rem;
+    padding-top: 0.75rem
+  }
+}

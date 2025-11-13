@@ -1,0 +1,52 @@
+<div class="table-shell">
+  <p-table [value]="data" [columns]="columns" [rows]="5" class="custom-table">
+    <ng-template pTemplate="header">
+      <tr>
+        @for(col of columns; track col['field']){
+        <th>
+          <div class="header-layout">
+            {{ col['header'] }}
+            <div class="header-icons">
+              <i class="pi pi-filter" pTooltip="Filter" tooltipPosition="right"></i>
+              <i class="pi pi-ellipsis-v" pTooltip="Options" tooltipPosition="right"></i>
+            </div>
+          </div>
+        </th>
+        }
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-row>
+      <tr>
+        <!-- <td>
+
+          {{ row.name }}
+
+        </td>
+        <td>{{ row.tableName }}</td>
+        <td>{{ row.createdOn }}</td>
+        <td>{{ row.createdBy }}</td>
+        <td>{{ row.updatedOn }}</td>
+        <td>{{ row.updatedBy }}</td>
+        <td>
+          <div class="desc" [pTooltip]="row.description" tooltipPosition="top">
+            {{ row.description }}
+          </div>
+        </td> -->
+        @for(col of columns; track col){
+        <td>
+          <div class="{{row[col['field']].length > 28 ? 'desc' : ''}}">
+            {{row[col['field']]}}
+          </div>
+        </td>
+        }
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="7">No records found</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
