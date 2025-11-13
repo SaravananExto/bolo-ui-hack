@@ -11,7 +11,7 @@
 
   <div class="chat-search__button chat-search__button--send">
     <button>
-      <img alt="Send" src="assets/images/send-icon.svg" />
+      <img alt="Send" src="assets/icons/send-icon.svg" />
     </button>
   </div>
 </div>
@@ -19,7 +19,7 @@
 <p-menu #menu [model]="items" [popup]="true" styleClass="chat-search__menu">
   <ng-template #item let-item>
     <a pRipple class="menu-item-link">
-      <img [alt]="item.label" [src]="'assets/images/' + item.icon" />
+      <img [alt]="item.label" [src]="'assets/icons/' + item.icon" />
       <span class="menu-item-label">{{ item.label }}</span>
     </a>
   </ng-template>
