@@ -6,5 +6,15 @@
   "hero.button.telugu": "Telugu",
   "hero.button.tamil": "Tamil",
   "hero.button.spanish": "Spanish",
-  "hero.button.french": "French"
+  "hero.button.french": "French",
+  "login.signup": "Sign Up",
+  "login.button": "Log In",
+  "login.usernameOrEmail": "Username or Email",
+  "login.password": "Password",
+  "login.rememberMe": "Remember Me",
+  "login.forgotPassword": "Forgot Password?",
+  "login.orLoginWith": "or log in with",
+  "reset.title": "Reset Password",
+  "reset.sendLink": "Send Reset Link",
+  "reset.returnToLogin": "Return to Log In"
 }

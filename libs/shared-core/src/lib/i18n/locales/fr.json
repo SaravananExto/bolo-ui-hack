@@ -6,5 +6,15 @@
   "hero.button.telugu": "Télougou",
   "hero.button.tamil": "Tamoul",
   "hero.button.spanish": "Espagnol",
-  "hero.button.french": "Français"
+  "hero.button.french": "Français",
+  "login.signup": "S'inscrire",
+  "login.button": "Se connecter",
+  "login.usernameOrEmail": "Nom d'utilisateur ou e-mail",
+  "login.password": "Mot de passe",
+  "login.rememberMe": "Se souvenir de moi",
+  "login.forgotPassword": "Mot de passe oublié ?",
+  "login.orLoginWith": "ou connectez-vous avec",
+  "reset.title": "Réinitialiser le mot de passe",
+  "reset.sendLink": "Envoyer le lien de réinitialisation",
+  "reset.returnToLogin": "Retour à la connexion"
 }

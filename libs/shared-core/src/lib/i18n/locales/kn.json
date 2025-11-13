@@ -6,5 +6,15 @@
   "hero.button.telugu": "ತೆಲುಗು",
   "hero.button.tamil": "ತಮಿಳು",
   "hero.button.spanish": "ಸ್ಪ್ಯಾನಿಷ್",
-  "hero.button.french": "ಫ್ರೆಂಚ್"
+  "hero.button.french": "ಫ್ರೆಂಚ್",
+  "login.signup": "ಸೈನ್ ಅಪ್",
+  "login.button": "ಲಾಗ್ ಇನ್",
+  "login.usernameOrEmail": "ಬಳಕೆದಾರ ಹೆಸರು ಅಥವಾ ಇಮೇಲ್",
+  "login.password": "ಗುಪ್ತಪದ",
+  "login.rememberMe": "ನನ್ನನ್ನು ನೆನಪಿಡಿ",
+  "login.forgotPassword": "ಗುಪ್ತಪದವನ್ನು ಮರೆತಿರಾ?",
+  "login.orLoginWith": "ಅಥವಾ ಇದರಿಂದ ಲಾಗಿನ್ ಆಗಿ",
+  "reset.title": "ಗುಪ್ತಪದವನ್ನು ಮರುಹೊಂದಿಸಿ",
+  "reset.sendLink": "ಮರುಹೊಂದಿಸುವ ಲಿಂಕ್ ಕಳುಹಿಸಿ",
+  "reset.returnToLogin": "ಲಾಗಿನ್‌ಗೆ ಹಿಂತಿರುಗಿ"
 }

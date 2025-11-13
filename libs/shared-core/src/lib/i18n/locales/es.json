@@ -6,5 +6,15 @@
   "hero.button.telugu": "Telugu",
   "hero.button.tamil": "Tamil",
   "hero.button.spanish": "Español",
-  "hero.button.french": "Francés"
+  "hero.button.french": "Francés",
+  "login.signup": "Regístrate",
+  "login.button": "Iniciar sesión",
+  "login.usernameOrEmail": "Nombre de usuario o correo electrónico",
+  "login.password": "Contraseña",
+  "login.rememberMe": "Recuérdame",
+  "login.forgotPassword": "¿Olvidaste tu contraseña?",
+  "login.orLoginWith": "o inicia sesión con",
+  "reset.title": "Restablecer la contraseña",
+  "reset.sendLink": "Enviar enlace de restablecimiento",
+  "reset.returnToLogin": "Volver a iniciar sesión"
 }

@@ -6,5 +6,15 @@
   "hero.button.telugu": "தெலுங்கு",
   "hero.button.tamil": "தமிழ்",
   "hero.button.spanish": "ஸ்பானிஷ்",
-  "hero.button.french": "பிரஞ்சு"
+  "hero.button.french": "பிரஞ்சு",
+  "login.signup": "பதிவு செய்யவும்",
+  "login.button": "உள்நுழையவும்",
+  "login.usernameOrEmail": "பயனர் பெயர் அல்லது மின்னஞ்சல்",
+  "login.password": "கடவுச்சொல்",
+  "login.rememberMe": "என்னை நினைவில் கொள்",
+  "login.forgotPassword": "கடவுச்சொல்லை மறந்துவிட்டீர்களா?",
+  "login.orLoginWith": "அல்லது இதன் மூலம் உள்நுழையவும்",
+  "reset.title": "கடவுச்சொல்லை மீட்டமைக்கவும்",
+  "reset.sendLink": "மீட்டமைப்பு இணைப்பை அனுப்பவும்",
+  "reset.returnToLogin": "உள்நுழைவு திரும்பவும்"
 }
