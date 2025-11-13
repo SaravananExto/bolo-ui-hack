@@ -18,12 +18,15 @@
           (ngModelChange)="switchLocale($event)"
           aria-label="Select Language"
         >
-          <option *ngFor="let opt of langOptions" [value]="opt.value">{{ opt.label }}</option>
+          @for (lng of ['en', 'fr', 'es', 'kn', 'ta', 'te']; track lng) {
+          <option [value]="lng">{{ getLangKey(lng)}}</option>
+          }
         </select>
       </div>
     </div>
   </div>
-  <div *ngIf="showDialog() && !showReset()" class="login-dialog-overlay">
+  @if (showDialog() && !showReset()) {
+  <div class="login-dialog-overlay">
     <div class="login-dialog">
       <button class="close-btn" (click)="showDialog.set(false)" aria-label="Close">&times;</button>
       <h2 class="dialog-title">{{ 'login.button' | translate }}</h2>
@@ -39,7 +42,9 @@
           name="username"
           autocomplete="username"
         />
-        <div *ngIf="usernameError()" class="input-error">{{ usernameError() }}</div>
+        @if (usernameError()) {
+        <div class="input-error">{{ usernameError() }}</div>
+        }
         <label class="dialog-label" for="password">{{ 'login.password' | translate }}</label>
         <p-password
           class="dialog-input"
@@ -53,7 +58,9 @@
           [style]="{width: '100%'}"
         >
         </p-password>
-        <div *ngIf="passwordError()" class="input-error">{{ passwordError() }}</div>
+        @if (passwordError()) {
+        <div class="input-error">{{ passwordError() }}</div>
+        }
         <div class="dialog-row">
           <label class="remember-me"
             ><input type="checkbox" /> {{ 'login.rememberMe' | translate }}</label
@@ -88,10 +95,12 @@
       <div class="dialog-footer">©2025 Exto-bolo release 25.10.0</div>
     </div>
   </div>
-  <div *ngIf="showDialog() && showReset()" class="login-dialog-overlay">
+  } @if (showDialog() && showReset()) {
+  <div class="login-dialog-overlay">
     <ui-cmp-reset-password
       (returnToLogin)="closeReset()"
       (closeAll)="closeAllDialogs()"
     ></ui-cmp-reset-password>
   </div>
+  }
 </div>
