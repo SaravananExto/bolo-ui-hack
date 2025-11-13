@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import 'primeicons/primeicons.css';
+
 *,
 *::before,
 *::after {
@@ -12,4 +14,9 @@ html {
 
 body {
   margin: 0;
+}
+
+.p-popover::after,
+.p-popover::before {
+  content: none !important;
 }
