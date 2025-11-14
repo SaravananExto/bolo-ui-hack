@@ -17,6 +17,8 @@
   "reset.title": "ಗುಪ್ತಪದವನ್ನು ಮರುಹೊಂದಿಸಿ",
   "reset.sendLink": "ಮರುಹೊಂದಿಸುವ ಲಿಂಕ್ ಕಳುಹಿಸಿ",
   "reset.returnToLogin": "ಲಾಗಿನ್‌ಗೆ ಹಿಂತಿರುಗಿ",
+  "chat.greetings.welcome_text": "ಹಾಯ್, ಬೋಲೊಗೆ ಸ್ವಾಗತ",
+  "chat.greetings.welcome_subtext": "ಫೋರ್ಟ್ ವರ್ಥ್, TX ನಲ್ಲಿ 89°F ಸ್ಪಷ್ಟ ಆಕಾಶ",
   "chat.message.example": "ಚಾಟ್ ಸಂದೇಶ ಇಲ್ಲಿ...",
   "chat.search.placeholder": "ಬೋಲೊಗೆ ಸಂದೇಶ",
   "chat.menu.uploadFile": "ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
@@ -44,5 +46,13 @@
   "documentLearning.viewDataTables": "ಡೇಟಾ ಟೇಬಲ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
   "documentLearning.addNew": "ಹೊಸದು ಸೇರಿಸಿ",
   "table.pageSize": "ಪುಟದ ಗಾತ್ರ",
-  "table.page": "ಪುಟ"
+  "table.page": "ಪುಟ",
+  "user_profile.settings.title": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+  "user_profile.settings.switch_companies": "ಕಂಪನಿಗಳನ್ನು ಬದಲಿಸಿ",
+  "user_profile.settings.language": "ಭಾಷೆ",
+  "user_profile.settings.date_format": "ದಿನಾಂಕ ಸ್ವರೂಪ",
+  "user_profile.settings.theme_color": "ಥೀಮ್ ಬಣ್ಣ",
+  "user_profile.settings.accent_color": "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ",
+  "user_profile.settings.privacy": "ಗೌಪ್ಯತೆ",
+  "user_profile.settings.support": "ಬೆಂಬಲ"
 }

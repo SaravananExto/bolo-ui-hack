@@ -17,6 +17,8 @@
   "reset.title": "Réinitialiser le mot de passe",
   "reset.sendLink": "Envoyer le lien de réinitialisation",
   "reset.returnToLogin": "Retour à la connexion",
+  "chat.greetings.welcome_text": "Bonjour, bienvenue à Bolo",
+  "chat.greetings.welcome_subtext": "89°F avec un ciel dégagé à Fort Worth, TX",
   "chat.message.example": "Message de chat ici...",
   "chat.search.placeholder": "Message à Bolo",
   "chat.menu.uploadFile": "Téléverser un fichier",
@@ -44,5 +46,13 @@
   "documentLearning.viewDataTables": "Voir les tables de données",
   "documentLearning.addNew": "Ajouter nouveau",
   "table.pageSize": "Taille de page",
-  "table.page": "Page"
+  "table.page": "Page",
+  "user_profile.settings.title": "Paramètres du profil utilisateur",
+  "user_profile.settings.switch_companies": "Changer d'entreprise",
+  "user_profile.settings.language": "Langue",
+  "user_profile.settings.date_format": "Format de date",
+  "user_profile.settings.theme_color": "Couleur du thème",
+  "user_profile.settings.accent_color": "Couleur d'accentuation",
+  "user_profile.settings.privacy": "Confidentialité",
+  "user_profile.settings.support": "Support"
 }

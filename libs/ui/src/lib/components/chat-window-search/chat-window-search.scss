@@ -4,8 +4,9 @@
   align-items: center;
   gap: 8px;
   border-radius: 60px;
-  background: #353535;
+  background: var(--ch-input-bg);
   padding: 8px 10px;
+  border: 1px solid var(--ch-input-border);
 
   &__input-wrapper {
     flex-grow: 1;
@@ -15,7 +16,7 @@
       height: 100%;
       border: none;
       background: transparent;
-      color: #fff;
+      color: var(--ch-input-text);
       font-family: Arial, sans-serif;
       font-size: 15px;
       font-weight: 400;
@@ -47,16 +48,16 @@
     }
 
     &--plus {
-      background-color: #4c4c4c;
+      background-color: var(--ch-input-plus-icon-bg);
     }
 
     &--send {
-      background-color: #4468fd;
+      background-color: var(--ch-input-send-icon-bg);
     }
 
     .plus-icon {
       font-size: 17px;
-      color: #aeaeae;
+      color: var(--ch-input-plus-icon-text);
     }
   }
 }
@@ -65,8 +66,8 @@
 :host ::ng-deep .chat-search__menu {
   &.p-menu {
     border-radius: 10px;
-    border: 1px solid #5b5b5b;
-    background: #303030;
+    border: 1px solid var(--menu-border);
+    background: var(--secondary-bg);
   }
 
   .p-menu-list {
@@ -85,11 +86,17 @@
   }
 
   .menu-item-label {
-    color: #fff;
+    color: var(--menu-item-text);
     font-family: Arial;
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.28px;
+  }
+
+  .p-menu-item-content:hover {
+    .menu-item-label {
+      color: var(--menu-item-text-hover);
+    }
   }
 }

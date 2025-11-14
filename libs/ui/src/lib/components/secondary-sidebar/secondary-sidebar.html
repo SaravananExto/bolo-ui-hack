@@ -27,69 +27,81 @@
 
 <p-popover #op styleClass="chat-sidebar__settings-popover">
   <div class="settings">
-    <h1 class="settings__title">Settings</h1>
+    <h1 class="settings__title">{{ 'user_profile.settings.title' | translate }}</h1>
 
     <div class="settings__form">
       <div class="settings__field">
-        <label class="settings__label" for="company-select">Switch Companies</label>
+        <label class="settings__label" for="company-select"
+          >{{ 'user_profile.settings.switch_companies' | translate }}</label
+        >
         <p-select
           id="company-select"
           class="settings__select"
           [options]="companies"
           [(ngModel)]="selectedCompany"
-          placeholder="Select a Company"
+          [placeholder]="'user_profile.settings.switch_companies' | translate"
         />
       </div>
 
       <div class="settings__field">
-        <label class="settings__label" for="language-select">Language</label>
+        <label class="settings__label" for="language-select"
+          >{{ 'user_profile.settings.language' | translate }}</label
+        >
         <p-select
           id="language-select"
           class="settings__select"
           [options]="languages"
           [(ngModel)]="selectedLanguage"
-          placeholder="Select a Language"
+          [placeholder]="'user_profile.settings.language' | translate"
+          (onClick)="switchLocale(selectedLanguage)"
         />
       </div>
 
       <div class="settings__field">
-        <label class="settings__label" for="date-format-select">Date Format</label>
+        <label class="settings__label" for="date-format-select"
+          >{{ 'user_profile.settings.date_format' | translate }}</label
+        >
         <p-select
           id="date-format-select"
           class="settings__select"
           [options]="dateFormats"
           [(ngModel)]="selectedDateFormat"
-          placeholder="Select a Date Format"
+          [placeholder]="'user_profile.settings.date_format' | translate"
         />
       </div>
 
       <div class="settings__field">
-        <label class="settings__label" for="theme-color-select">Theme Color</label>
+        <label class="settings__label" for="theme-color-select"
+          >{{ 'user_profile.settings.theme_color' | translate }}</label
+        >
         <p-select
           id="theme-color-select"
           class="settings__select"
           [options]="themeColors"
           [(ngModel)]="selectedThemeColor"
-          placeholder="Select a Theme Color"
+          [placeholder]="'user_profile.settings.theme_color' | translate"
+          (onClick)="changeTheme(selectedThemeColor)"
         />
       </div>
 
       <div class="settings__field">
-        <label class="settings__label" for="accent-color-select">Accent Color</label>
+        <label class="settings__label" for="accent-color-select"
+          >{{ 'user_profile.settings.accent_color' | translate }}</label
+        >
         <p-select
           id="accent-color-select"
           class="settings__select"
           [options]="accentColors"
           [(ngModel)]="selectedAccentColor"
-          placeholder="Select an Accent Color"
+          [placeholder]="'user_profile.settings.accent_color' | translate"
         />
       </div>
     </div>
 
     <div class="settings__footer">
-      <span class="settings__footer-label">Terms and Privacy</span>
+      <span class="settings__footer-label">{{ 'user_profile.settings.privacy' | translate }}</span>
       <hr />
-      <span class="settings__footer-label">Customer Support</span>
+      <span class="settings__footer-label">{{ 'user_profile.settings.support' | translate }}</span>
     </div>
   </div>
 </p-popover>

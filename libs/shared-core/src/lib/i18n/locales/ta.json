@@ -17,6 +17,8 @@
   "reset.title": "கடவுச்சொல்லை மீட்டமைக்கவும்",
   "reset.sendLink": "மீட்டமைப்பு இணைப்பை அனுப்பவும்",
   "reset.returnToLogin": "உள்நுழைவு திரும்பவும்",
+  "chat.greetings.welcome_text": "வணக்கம், போலோவுக்கு வரவேற்கிறோம்",
+  "chat.greetings.welcome_subtext": "போர்ட் வொர்த், TX இல் 89°F தெளிவான வானிலை",
   "chat.message.example": "அரட்டை செய்தி இங்கே...",
   "chat.search.placeholder": "போலோவுக்கு செய்தி",
   "chat.menu.uploadFile": "கோப்பை பதிவேற்றவும்",
@@ -44,5 +46,13 @@
   "documentLearning.viewDataTables": "தரவு அட்டவணைகளை காண்க",
   "documentLearning.addNew": "புதியதைச் சேர்க்கவும்",
   "table.pageSize": "பக்க அளவு",
-  "table.page": "பக்கம்"
+  "table.page": "பக்கம்",
+  "user_profile.settings.title": "அமைப்புகள்",
+  "user_profile.settings.switch_companies": "நிறுவனங்களை மாற்றவும்",
+  "user_profile.settings.language": "மொழி",
+  "user_profile.settings.date_format": "தேதி வடிவம்",
+  "user_profile.settings.theme_color": "தீம் நிறம்",
+  "user_profile.settings.accent_color": "அக்சென்ட் நிறம்",
+  "user_profile.settings.privacy": "தனியுரிமை",
+  "user_profile.settings.support": "ஆதரவு"
 }

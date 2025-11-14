@@ -17,6 +17,8 @@
   "reset.title": "Reset Password",
   "reset.sendLink": "Send Reset Link",
   "reset.returnToLogin": "Return to Log In",
+  "chat.greetings.welcome_text": "Hi, welcome to Bolo",
+  "chat.greetings.welcome_subtext": "89°F with clear skies in Fort Worth, TX",
   "chat.message.example": "Chat message here...",
   "chat.search.placeholder": "Message Bolo",
   "chat.menu.uploadFile": "Upload a file",
@@ -44,5 +46,13 @@
   "documentLearning.viewDataTables": "View Data Tables",
   "documentLearning.addNew": "Add New",
   "table.pageSize": "Page Size",
-  "table.page": "Page"
+  "table.page": "Page",
+  "user_profile.settings.title": "Settings",
+  "user_profile.settings.switch_companies": "Switch Companies",
+  "user_profile.settings.language": "Language",
+  "user_profile.settings.date_format": "Date Format",
+  "user_profile.settings.theme_color": "Theme Color",
+  "user_profile.settings.accent_color": "Accent Color",
+  "user_profile.settings.privacy": "Terms and Privacy",
+  "user_profile.settings.support": "Customer Support"
 }
