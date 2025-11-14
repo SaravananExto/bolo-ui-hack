@@ -4,7 +4,7 @@
 
 /* Sidebar Base */
 .chat-sidebar {
-  background-color: #353535;
+  background-color: var(--secondary-bg);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -43,7 +43,7 @@
 }
 
 .chat-sidebar__option-text {
-  color: #fff;
+  color: var(--sidebar-left-sidebar-option-text);
   font-family: Arial;
   font-size: 15px;
   font-weight: 400;
@@ -62,11 +62,11 @@
   align-items: center;
   gap: 8px;
   transition: width 0.3s ease;
-  background-color: #4c4c4c;
+  background-color: var(--sidebar-left-search-bg);
 }
 
 .chat-sidebar__search-input {
-  color: #fff;
+  color: var(--sidebar-left-search-input-text);
   font-family: Arial;
   font-size: 15px;
   font-weight: 400;
@@ -82,7 +82,7 @@
 }
 
 .chat-sidebar__search-input::placeholder {
-  color: #fff;
+  color: var(--sidebar-left-search-input-text);
 }
 
 /* Middle Section (History) */
@@ -107,7 +107,7 @@
 }
 
 .chat-history__title {
-  color: #939393;
+  color: var(--history-title-text);
   font-size: 15px;
   font-weight: 700;
   line-height: 24px;
@@ -135,12 +135,12 @@
 }
 
 .chat-history__item:hover {
-  background: #4c4c4c;
+  background: var(--history-item-hover-bg);
 }
 
 .chat-history__message {
   margin: 0;
-  color: #fff;
+  color: var(--history-item-text);
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
@@ -159,8 +159,8 @@
 :host ::ng-deep .chat-history__menu-items {
   &.p-menu {
     border-radius: 10px;
-    border: 1px solid #5b5b5b;
-    background: #303030;
+    border: 1px solid var(--menu-border);
+    background: var(--secondary-bg);
     min-width: 112px;
   }
 
@@ -184,12 +184,18 @@
   }
 
   .menu-item-label {
-    color: #fff;
+    color: var(--menu-item-text);
     font-family: Arial;
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.28px;
+  }
+
+  .p-menu-item-content:hover {
+    .menu-item-label {
+      color: var(--menu-item-text-hover);
+    }
   }
 }
 
@@ -227,4 +233,11 @@
   transform: rotate(180deg);
   width: 20px;
   height: 20px;
+}
+
+.chat-sidebar__icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
 }

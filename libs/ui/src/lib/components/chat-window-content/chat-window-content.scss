@@ -20,7 +20,7 @@
 }
 
 .chat-message__meta {
-  color: #c2c2c2;
+  color: var(--ch-bot-text-meta);
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -30,7 +30,7 @@
 
 .chat-message--bot .chat-message__text {
   max-width: 80%;
-  color: #ffffff;
+  color: var(--ch-bot-text);
   font-family: Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -49,13 +49,13 @@
   max-width: 80%;
   padding: 8px 16px;
   border-radius: 18px;
-  background: #4468fd;
+  background: var(--ch-user-text-bubble-bg);
   word-wrap: break-word;
   white-space: pre-wrap;
 }
 
 .chat-message--user .chat-message__text {
-  color: #ffffff;
+  color: var(--ch-user-text);
   font-family: Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -96,6 +96,6 @@
     padding-block: 1px;
     padding-inline: 5px;
     border-radius: 6px;
-    background-color: #353535;
+    background-color: var(--ch-more-options-bg);
   }
 }

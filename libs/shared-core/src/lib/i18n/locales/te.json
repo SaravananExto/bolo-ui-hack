@@ -17,6 +17,8 @@
   "reset.title": "పాస్వర్డ్‌ను రీసెట్ చేయండి",
   "reset.sendLink": "రీసెట్ లింక్‌ను పంపండి",
   "reset.returnToLogin": "లాగిన్‌కు తిరిగి వెళ్ళండి",
+  "chat.greetings.welcome_text": "హాయ్, బోలోకి స్వాగతం",
+  "chat.greetings.welcome_subtext": "ఫోర్ట్ వర్థ్, TX లో 89°F స్పష్టమైన ఆకాశం",
   "chat.message.example": "చాట్ సందేశం ఇక్కడ...",
   "chat.search.placeholder": "బోలోకి సందేశం",
   "chat.menu.uploadFile": "ఫైల్‌ను అప్‌లోడ్ చేయండి",
@@ -44,5 +46,13 @@
   "documentLearning.viewDataTables": "డేటా పట్టికలను చూడండి",
   "documentLearning.addNew": "కొత్తదాన్ని జోడించండి",
   "table.pageSize": "పేజీ పరిమాణం",
-  "table.page": "పేజీ"
+  "table.page": "పేజీ",
+  "user_profile.settings.title": "సెట్టింగ్స్",
+  "user_profile.settings.switch_companies": "కంపెనీలను మార్చండి",
+  "user_profile.settings.language": "భాష",
+  "user_profile.settings.date_format": "తేదీ ఫార్మాట్",
+  "user_profile.settings.theme_color": "థీమ్ రంగు",
+  "user_profile.settings.accent_color": "యాక్సెంట్ రంగు",
+  "user_profile.settings.privacy": "గోప్యత",
+  "user_profile.settings.support": "సహాయం"
 }
