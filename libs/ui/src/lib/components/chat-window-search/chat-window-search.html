@@ -6,7 +6,7 @@
   </div>
 
   <div class="chat-search__input-wrapper">
-    <input class="chat-search__input" placeholder="Message Bolo" />
+    <input class="chat-search__input" [placeholder]="'chat.search.placeholder' | translate" />
   </div>
 
   <div class="chat-search__button chat-search__button--send">
@@ -20,7 +20,7 @@
   <ng-template #item let-item>
     <a pRipple class="menu-item-link">
       <img [alt]="item.label" [src]="'assets/icons/' + item.icon" />
-      <span class="menu-item-label">{{ item.label }}</span>
+      <span class="menu-item-label">{{ item.label | translate }}</span>
     </a>
   </ng-template>
 </p-menu>

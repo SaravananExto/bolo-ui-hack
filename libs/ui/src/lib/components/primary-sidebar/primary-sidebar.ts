@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 
 @Component({
   selector: 'ui-cmp-primary-sidebar',
   standalone: true,
-  imports: [MenuModule],
+  imports: [MenuModule, TranslatePipe],
   templateUrl: './primary-sidebar.html',
   styleUrl: './primary-sidebar.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -17,15 +18,15 @@ export class PrimarySidebar {
     {
       items: [
         {
-          label: 'Rename',
+          label: 'sidebar.menu.rename',
           icon: 'pen-icon.svg',
         },
         {
-          label: 'Pin',
+          label: 'sidebar.menu.pin',
           icon: 'pin-icon.svg',
         },
         {
-          label: 'Delete',
+          label: 'sidebar.menu.delete',
           icon: 'trash-icon.svg',
         },
       ],
