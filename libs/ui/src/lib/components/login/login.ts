@@ -6,6 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 
+import { Router } from '@angular/router';
 import { Button as UiElmButton } from '../../elements/button/button';
 import { ResetPasswordComponent } from '../reset-password/reset-password';
 
@@ -38,6 +39,7 @@ export class LoginComponent {
   showLangDropdown = signal(false);
 
   private translation = inject(TranslationService);
+  private router = inject<Router>(Router);
   username = input<string>('');
   password = input<string>('');
   showDialog = signal(false);
@@ -79,6 +81,7 @@ export class LoginComponent {
     }
     // Success
     console.log('Login successful!');
+    this.router.navigate(['chat']);
   }
 
   getLangKey(lng: string): string {

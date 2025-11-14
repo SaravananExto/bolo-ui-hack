@@ -4,7 +4,19 @@
     (historyClicked)="onHistoryClicked($event)"
   ></ui-cmp-primary-sidebar>
   <div class="dynamic-container">
-    <router-outlet></router-outlet>
+    <div class="components">
+      <router-outlet></router-outlet>
+    </div>
+      <div class="dock-indicator">
+        @if(isMenuDockVisible){
+        <ui-cmp-menu-dock (navigateTo)="navigateTo($event)" (mouseleave)="toggeleMenuDock()"></ui-cmp-menu-dock>
+      }
+      @else {
+        <div class="dock-indicator">
+          <i class="pi pi-ellipsis-h" (mouseenter)="toggeleMenuDock()"></i>
+        </div>
+      }
+    </div>
   </div>
   <ui-cmp-secondary-sidebar class="secondary-sidebar"></ui-cmp-secondary-sidebar>
 </main>

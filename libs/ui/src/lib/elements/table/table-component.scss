@@ -8,31 +8,29 @@
   .header-layout {
     display: flex;
     justify-content: space-between;
+    margin: 0 0.75rem 0 0.75rem;
   }
 }
 
-.custom-table ::ng-deep .p-datatable-thead>tr>th {
-  background: #353535;
-  color: #F8F8F8;
+.custom-table ::ng-deep .p-datatable-thead > tr > th {
+  background: var(--primary, #353535);
+  color: var(--text, #f8f8f8);
   font-weight: 600;
   height: 3rem;
   border-bottom: none;
 }
 
-.custom-table ::ng-deep .p-datatable-tbody>tr>td {
+.custom-table ::ng-deep .p-datatable-tbody > tr > td {
   padding: 0.75rem 0.75rem;
-  color: #F8F8F8;
-  background: rgb(56, 55, 55);
+  color: var(--text, #f8f8f8);
+  background: var(--surface, rgb(56, 55, 55));
   vertical-align: middle;
   border-bottom: none;
 }
 
-:host ::ng-deep .p-datatable-tbody>tr:nth-child(odd)>td {
-  background: #4c4c4c;
+:host ::ng-deep .p-datatable-tbody > tr:nth-child(odd) > td {
+  background: var(--bg, #4c4c4c);
 }
-
-
-
 
 .desc {
   max-width: 28rem;
@@ -42,7 +40,8 @@
 }
 
 :host ::ng-deep .pi {
-  font-size: 0.76rem
+  font-size: 0.75rem;
+  color: var(--text);
 }
 
 /* Responsive tweaks */
@@ -50,4 +49,60 @@
   .desc {
     max-width: 10rem;
   }
+}
+
+.custom-pagination {
+  position: fixed;
+  right: 10rem;
+  bottom: 6rem;
+  color: var(--text, #f8f8f8);
+
+  .table-page-size-wrapper {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-right: 1rem;
+  }
+  .nav-btn {
+    min-width: 2.2rem;
+    min-height: 2.2rem;
+  }
+  .page-report {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+  .table-page-size {
+    margin-right: 1rem;
+  }
+}
+
+:host ::ng-deep .p-select-option.p-select-option-selected {
+  color: var(--text, #000000);
+  background: var(--surface, rgb(56, 55, 55)) !important;
+
+  .p-focus {
+    color: var(--text, #000000);
+  }
+}
+
+:host ::ng-deep .p-select.p-variant-filled {
+  background-color: var(--shadow, #4c4c4c);
+  border: 1px solid var(--bg, #4c4c4c);
+}
+
+:host ::ng-deep .p-select-dropdown {
+  color: var(--text, #f8f8f8);
+}
+:host ::ng-deep .p-select-label {
+  color: var(--text, #f8f8f8);
+}
+
+:host ::ng-deep {
+  --p-select-filled-hover-background: var(--bg, #353535);
+  --p-select-overlay-background: var(--bg, #353535);
+  --p-select-overlay-border-color: var(--bg, #353535);
+  --p-select-overlay-color: var(--text, #f8f8f8);
+  --p-select-focus-border-color: var(--bg, #353535);
+  --p-select-filled-focus-background: var(--bg, #353535);
+  --p-select-option-color: var(--text, #f8f8f8);
+  --p-select-option-focus-background: var(--shadow, #4c4c4c);
 }

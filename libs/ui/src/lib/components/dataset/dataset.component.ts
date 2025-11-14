@@ -1,34 +1,43 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
+import { TranslationService } from '@bolo/shared-core/i18n/services';
 import { TableComponent } from '@bolo/ui/elements';
-import { Tooltip } from "primeng/tooltip";
+import { Tooltip } from 'primeng/tooltip';
 
 @Component({
   selector: 'app-dataset.component',
-  imports: [TableComponent, Tooltip],
+  imports: [TableComponent, Tooltip, TranslatePipe],
   templateUrl: './dataset.component.html',
   styleUrl: './dataset.component.scss',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DatasetComponent { 
+export class DatasetComponent implements OnInit {
+  private router = inject<Router>(Router);
+  private translateSvc = inject(TranslationService);
 
-
-  constructor(private router: Router){
-
+  ngOnInit(): void {
+    this.loadTranslation();
   }
 
-   get data(): Record<string, any>[] {
+  loadTranslation() {
+    const currentLocale = this.translateSvc.currentLocale;
+    this.translateSvc.switchLocale(currentLocale);
+  }
+
+  get data(): Record<string, any>[] {
     return this.sampleRows;
   }
 
-  get cols(): {field: string, header: string}[] {
-    return this.columns
+  get cols(): { field: string; header: string }[] {
+    return this.columns;
   }
-  navigateToChat(){
-    this.router.navigate([''])
+
+  navigateToChat() {
+    this.router.navigate(['']);
   }
-   private sampleRows: Record<string, any>[] = [
+  private sampleRows: Record<string, any>[] = [
     {
       name: 'Resident ID Main',
       tableName: 'custom_xyz_resident',
@@ -69,15 +78,15 @@ export class DatasetComponent {
       description:
         'The Sales Main table serves as the main repository for storing sales transactions and related order details.',
     },
-  ]
+  ];
 
   private columns = [
-    {field:"name", header:"Name"},
-    {field:"tableName", header:"Table Name"},
-    {field:"createdOn", header:"Created On"},
-    {field:"createdBy", header:"Created By"},
-    {field:"updatedOn", header:"Updated On"},
-    {field:"updatedBy", header:"Updated By"},
-    {field:"description", header:"Desription"}
+    { field: 'name', header: 'Name' },
+    { field: 'tableName', header: 'Table Name' },
+    { field: 'createdOn', header: 'Created On' },
+    { field: 'createdBy', header: 'Created By' },
+    { field: 'updatedOn', header: 'Updated On' },
+    { field: 'updatedBy', header: 'Updated By' },
+    { field: 'description', header: 'Desription' },
   ];
 }

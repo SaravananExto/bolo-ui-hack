@@ -1,6 +1,6 @@
 .main-container {
   height: 100vh;
-  background: #4c4c4c;
+  background: var(--bg);
 
   .heading {
     display: grid;
@@ -15,12 +15,11 @@
     }
 
     .title {
-      color: #fff;
+      color: var(--text);
       font-size: 2rem;
       font-weight: 300;
       justify-self: center;
     }
-
   }
 
   .meta {
@@ -31,7 +30,7 @@
     padding-top: 7rem;
 
     .info {
-      color: #fff;
+      color: var(--text);
     }
 
     .action-icons {
@@ -43,6 +42,6 @@
 
   .tbl {
     margin: 0 5rem 0 5rem;
-    padding-top: 0.75rem
+    padding-top: 0.75rem;
   }
 }

@@ -37,5 +37,12 @@
   "secondary.menu.datasets": "Datasets",
   "secondary.menu.documentLearning": "Document Learning",
   "secondary.menu.documentManager": "Document Manager",
-  "secondary.menu.jobStatus": "Job Status"
+  "secondary.menu.jobStatus": "Job Status",
+  "datasets.title": "Datasets",
+  "datasets.selectedDb": "Selected Database",
+  "documentLearning.title": "Document Learning",
+  "documentLearning.viewDataTables": "View Data Tables",
+  "documentLearning.addNew": "Add New",
+  "table.pageSize": "Page Size",
+  "table.page": "Page"
 }

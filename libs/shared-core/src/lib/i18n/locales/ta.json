@@ -37,5 +37,12 @@
   "secondary.menu.datasets": "தரவுத்தளங்கள்",
   "secondary.menu.documentLearning": "ஆவணக் கற்றல்",
   "secondary.menu.documentManager": "ஆவண மேலாளர்",
-  "secondary.menu.jobStatus": "வேலை நிலை"
+  "secondary.menu.jobStatus": "வேலை நிலை",
+  "datasets.title": "தரவு தொகுப்புகள்",
+  "datasets.selectedDb": "தேர்ந்தெடுத்த தரவுத்தளம்",
+  "documentLearning.title": "ஆவணக் கற்றல்",
+  "documentLearning.viewDataTables": "தரவு அட்டவணைகளை காண்க",
+  "documentLearning.addNew": "புதியதைச் சேர்க்கவும்",
+  "table.pageSize": "பக்க அளவு",
+  "table.page": "பக்கம்"
 }

@@ -1,15 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, TableComponent } from '@bolo/ui/elements';
+import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
+import { TranslationService } from '@bolo/shared-core/i18n/services';
+import { TableComponent } from '@bolo/ui/elements';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'lib-document-learning',
-  imports: [Button, TableComponent],
+  imports: [ButtonModule, TableComponent, TranslatePipe],
   templateUrl: './document-learning.html',
   styleUrl: './document-learning.scss',
 })
-export class DocumentLearning {
-  constructor(private router: Router) {}
+export class DocumentLearning implements OnInit {
+  private router = inject<Router>(Router);
+  private translateSvc = inject(TranslationService);
+
+  ngOnInit(): void {
+    this.loadTranslation();
+  }
+
+  loadTranslation() {
+    const currentLocale = this.translateSvc.currentLocale;
+    this.translateSvc.switchLocale(currentLocale);
+  }
 
   get data() {
     return this.rowData;

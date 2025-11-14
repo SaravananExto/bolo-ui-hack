@@ -12,44 +12,43 @@ import { TooltipModule } from 'primeng/tooltip';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuDock {
-
-  navigateTo = output<string>()
+  navigateTo = output<string>();
 
   position: 'left' | 'right' | 'top' | 'bottom' = 'bottom';
 
   items: MenuItem[] = [
     {
-      label: "New Conversation",
-      icon: "./New Conversation Rollover.svg",
-      command: (event) => {
-        this.navigateTo.emit('')
+      label: 'New Conversation',
+      icon: 'assets/icons/new-conversation-icon.svg',
+      command: event => {
+        this.navigateTo.emit('chat');
       },
     },
     {
-      label: "Configuration",
-      icon: "./Configuration Rollover.svg",
+      label: 'Configuration',
+      icon: 'assets/icons/configuration-icon.svg',
     },
     {
-      label: "Datasets",
-      icon: "./Datasets Rollover.svg",
+      label: 'Datasets',
+      icon: 'assets/icons/datasets-icon.svg',
       command: () => {
-        this.navigateTo.emit('datasets');
+        this.navigateTo.emit('chat/datasets');
       },
     },
     {
-      label: "Jobs",
-      icon: "./Jobs Rollover.svg",
+      label: 'Jobs',
+      icon: 'assets/icons/job-status-icon.svg',
     },
     {
-      label: "Document Learning",
-      icon: "./Document Learning Rollover.svg",
+      label: 'Document Learning',
+      icon: 'assets/icons/document-learning-icon.svg',
       command: () => {
-        this.navigateTo.emit("document-learning")
-      }
+        this.navigateTo.emit('chat/document-learning');
+      },
     },
     {
-      label: "Document Manager",
-      icon: "./Document Manager Rollover.svg",
-    }
-  ]
+      label: 'Document Manager',
+      icon: 'assets/icons/document-manager-icon.svg',
+    },
+  ];
 }
