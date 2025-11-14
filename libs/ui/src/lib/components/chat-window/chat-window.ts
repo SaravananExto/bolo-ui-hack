@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { ThemeService } from '@bolo/shared-core/theme/services';
 
 import { ChatWindowContent } from '../chat-window-content/chat-window-content';
@@ -7,7 +8,7 @@ import { ChatWindowSearch } from '../chat-window-search/chat-window-search';
 @Component({
   selector: 'ui-cmp-chat-window',
   standalone: true,
-  imports: [ChatWindowContent, ChatWindowSearch],
+  imports: [ChatWindowContent, ChatWindowSearch, TranslatePipe],
   templateUrl: './chat-window.html',
   styleUrl: './chat-window.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

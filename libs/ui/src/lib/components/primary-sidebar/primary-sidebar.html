@@ -10,28 +10,31 @@
     @if (!this.collapsed()) {
     <div class="chat-sidebar__search">
       <img alt="Search" src="assets/icons/search-icon.svg" />
-      <input class="chat-sidebar__search-input" placeholder="Search" />
+      <input
+        class="chat-sidebar__search-input"
+        [placeholder]="'sidebar.search.placeholder' | translate"
+      />
     </div>
     }
 
     <div class="chat-sidebar__option">
       <img alt="New Conversation" src="assets/icons/new-conversation-icon.svg" />
-      <span class="chat-sidebar__option-text">New Conversation</span>
+      <span class="chat-sidebar__option-text">{{ 'sidebar.newConversation' | translate }}</span>
     </div>
 
     <div class="chat-sidebar__option">
       <img alt="History" src="assets/icons/history-icon.svg" />
-      <span class="chat-sidebar__option-text">History</span>
+      <span class="chat-sidebar__option-text">{{ 'sidebar.history' | translate }}</span>
     </div>
   </div>
 
   <div class="chat-sidebar__middle">
     @if (!this.collapsed()) {
     <div class="chat-history">
-      <h2 class="chat-history__title">Pinned</h2>
+      <h2 class="chat-history__title">{{ 'sidebar.pinned' | translate }}</h2>
       <div class="chat-history__list">
         <div class="chat-history__item">
-          <p class="chat-history__message">How many records are there in the exto database?</p>
+          <p class="chat-history__message">{{ 'sidebar.exampleMessage' | translate }}</p>
           <button class="chat-history__menu-button" (click)="menu.toggle($event)">
             <img alt="More options" src="assets/icons/ellipses-icon.svg" />
           </button>
@@ -58,7 +61,7 @@
   <ng-template #item let-item>
     <a pRipple class="menu-item-link">
       <img [alt]="item.label" [src]="'assets/icons/' + item.icon" />
-      <span class="menu-item-label">{{ item.label }}</span>
+      <span class="menu-item-label">{{ item.label | translate }}</span>
     </a>
   </ng-template>
 </p-menu>
