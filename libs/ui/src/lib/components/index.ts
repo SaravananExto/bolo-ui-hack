@@ -1,4 +1,7 @@
 export * from './chat-window/chat-window';
+export * from './dataset/dataset.component';
+export * from './dock/menu-dock';
+export * from './document-learning/document-learning';
 export * from './hero-banner/hero-banner';
 export * from './login/login';
 export * from './not-found/not-found';

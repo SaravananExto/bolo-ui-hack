@@ -1,0 +1,95 @@
+.main-container {
+  height: 100vh;
+  background: var(--bg);
+
+  .heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    padding-top: 7.5rem;
+    align-items: center;
+
+    .back-btn {
+      cursor: pointer;
+      padding-left: 5rem;
+    }
+
+    .title {
+      color: var(--text);
+      font-size: 2rem;
+      font-weight: 300;
+      justify-self: center;
+    }
+  }
+
+  .meta {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 0 6rem 0 5.3rem;
+    padding-top: 7rem;
+    gap: 0.76rem;
+
+    .custom-btn-group {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .custom-btn {
+      border-radius: 10px;
+      font-size: 0.85rem;
+      padding: 0.65rem 1.5rem;
+      font-weight: 300;
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: box-shadow 0.15s;
+      box-shadow: 0 1.5px 6px var(--border);
+      height: 2.3rem;
+      width: 10.6rem;
+      justify-content: center;
+    }
+
+    .custom-btn.outlined {
+      background: transparent;
+      border: 1.5px solid var(--border-strong);
+      color: var(--text);
+    }
+
+    .custom-btn.filled {
+      background: var(--accent);
+      color: var(--text);
+      border: none;
+    }
+
+    .custom-btn.filled .pi-plus {
+      margin-right: 0.25rem;
+      font-size: 0.7rem;
+      vertical-align: middle;
+    }
+
+    .custom-btn.filled .pi-angle-down {
+      margin-left: 1.2rem;
+      font-size: 1.7rem;
+      vertical-align: middle;
+    }
+
+    .custom-btn:hover {
+      box-shadow: 0 2px 12px rgba(60, 60, 60, 0.08);
+    }
+    .custom-btn.filled:hover {
+      background: var(--accent-dark);
+    }
+    .custom-btn.outlined:hover {
+      border-color: var(--border-strong);
+      background: transparent;
+    }
+  }
+
+  .tbl {
+    margin: 0 5rem 0 5rem;
+    padding-top: 0.75rem;
+  }
+}

@@ -1,0 +1,57 @@
+<div class="table-shell">
+  <p-table [value]="pagedData" [columns]="columns" class="custom-table">
+    <ng-template pTemplate="header">
+      <tr>
+        @for(col of columns; track col['field']){
+        <th>
+          <div class="header-layout">
+            {{ col['header'] }}
+            <div class="header-icons">
+              <i class="pi pi-filter" pTooltip="Filter" tooltipPosition="right"></i>
+              <i class="pi pi-ellipsis-v" pTooltip="Options" tooltipPosition="right"></i>
+            </div>
+          </div>
+        </th>
+        }
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-row>
+      <tr>
+        @for(col of columns; track col){
+        <td>
+          <div class="{{row[col['field']].length > 28 ? 'desc' : ''}}">
+            {{row[col['field']]}}
+          </div>
+        </td>
+        }
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td [attr.colspan]="columns.length">No records found</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- Custom paginator -->
+  <div class="custom-pagination">
+    <span>{{ 'table.pageSize'| translate}}</span>
+    <div class="table-page-size-wrapper">
+    <p-select 
+      [options]="paginationOption"
+      optionLabel="label"
+      optionValue="value"
+      [(ngModel)]="rowsPerPage"
+      (ngModelChange)="onRowsPerPageChange()"
+      class="table-page-size"
+      [showClear]="false">
+    </p-select>
+  </div>
+    <i (click)="prevPage()"  class="pi pi-angle-left"></i>
+    <span class="page-report">
+      {{'table.page' | translate}} {{currentPage}} of {{totalPages}}
+    </span>
+    <i class="pi pi-angle-right" (click)="nextPage()"></i>
+  </div>
+</div>

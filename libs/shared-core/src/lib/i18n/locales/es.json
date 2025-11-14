@@ -37,5 +37,12 @@
   "secondary.menu.datasets": "Conjuntos de datos",
   "secondary.menu.documentLearning": "Aprendizaje de documentos",
   "secondary.menu.documentManager": "Gestor de documentos",
-  "secondary.menu.jobStatus": "Estado del trabajo"
+  "secondary.menu.jobStatus": "Estado del trabajo",
+  "datasets.title": "Conjuntos de datos",
+  "datasets.selectedDb": "Base de datos seleccionada",
+  "documentLearning.title": "Aprendizaje de documentos",
+  "documentLearning.viewDataTables": "Ver tablas de datos",
+  "documentLearning.addNew": "Agregar nuevo",
+  "table.pageSize": "Tamaño de página",
+  "table.page": "Página"
 }

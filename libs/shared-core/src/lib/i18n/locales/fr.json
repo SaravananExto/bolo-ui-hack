@@ -37,5 +37,12 @@
   "secondary.menu.datasets": "Jeux de données",
   "secondary.menu.documentLearning": "Apprentissage de documents",
   "secondary.menu.documentManager": "Gestionnaire de documents",
-  "secondary.menu.jobStatus": "Statut du travail"
+  "secondary.menu.jobStatus": "Statut du travail",
+  "datasets.title": "Jeux de données",
+  "datasets.selectedDb": "Base de données sélectionnée",
+  "documentLearning.title": "Apprentissage des documents",
+  "documentLearning.viewDataTables": "Voir les tables de données",
+  "documentLearning.addNew": "Ajouter nouveau",
+  "table.pageSize": "Taille de page",
+  "table.page": "Page"
 }

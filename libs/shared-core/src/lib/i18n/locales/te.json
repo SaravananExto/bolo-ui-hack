@@ -37,5 +37,12 @@
   "secondary.menu.datasets": "డేటాసెట్‌లు",
   "secondary.menu.documentLearning": "డాక్యుమెంట్ లెర్నింగ్",
   "secondary.menu.documentManager": "డాక్యుమెంట్ మేనేజర్",
-  "secondary.menu.jobStatus": "జాబ్ స్థితి"
+  "secondary.menu.jobStatus": "జాబ్ స్థితి",
+  "datasets.title": "డేటాసెట్లు",
+  "datasets.selectedDb": "ఎంచుకున్న డేటాబేస్",
+  "documentLearning.title": "పత్ర అధ్యయనం",
+  "documentLearning.viewDataTables": "డేటా పట్టికలను చూడండి",
+  "documentLearning.addNew": "కొత్తదాన్ని జోడించండి",
+  "table.pageSize": "పేజీ పరిమాణం",
+  "table.page": "పేజీ"
 }

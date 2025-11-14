@@ -37,5 +37,12 @@
   "secondary.menu.datasets": "ಡೇಟಾಸೆಟ್‌ಗಳು",
   "secondary.menu.documentLearning": "ಡಾಕ್ಯುಮೆಂಟ್ ಕಲಿಕೆ",
   "secondary.menu.documentManager": "ಡಾಕ್ಯುಮೆಂಟ್ ವ್ಯವಸ್ಥಾಪಕ",
-  "secondary.menu.jobStatus": "ಕೆಲಸದ ಸ್ಥಿತಿ"
+  "secondary.menu.jobStatus": "ಕೆಲಸದ ಸ್ಥಿತಿ",
+  "datasets.title": "ಡೇಟಾಸೆಟ್‌ಗಳು",
+  "datasets.selectedDb": "ಆಯ್ಕೆ된 ಡೇಟಾಬೇಸ್",
+  "documentLearning.title": "ದಸ್ತಾವೇಜು ಅಧ್ಯಯನ",
+  "documentLearning.viewDataTables": "ಡೇಟಾ ಟೇಬಲ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
+  "documentLearning.addNew": "ಹೊಸದು ಸೇರಿಸಿ",
+  "table.pageSize": "ಪುಟದ ಗಾತ್ರ",
+  "table.page": "ಪುಟ"
 }

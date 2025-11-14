@@ -5,4 +5,4 @@ export interface ThemeConfig {
   name: string;
   variables: Record<string, string>;
 }
-export const DEFAULT_THEME_NAME = 'QUANTUM';
+export const DEFAULT_THEME_NAME = 'GRAPHITE'; //changed default to graphite

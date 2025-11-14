@@ -1,0 +1,20 @@
+.chat-app-container {
+  display: flex;
+}
+
+.chat-window-container {
+  flex-grow: 1;
+}
+
+.menu-dock-container {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+}
+
+:host ::ng-deep .pi {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
