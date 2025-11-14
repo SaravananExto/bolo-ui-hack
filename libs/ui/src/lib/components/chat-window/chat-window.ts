@@ -1,14 +1,16 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { ThemeService } from '@bolo/shared-core/theme/services';
 
 import { ChatWindowContent } from '../chat-window-content/chat-window-content';
+import { ChatWindowGreeting } from '../chat-window-greeting/chat-window-greeting';
 import { ChatWindowSearch } from '../chat-window-search/chat-window-search';
 
 @Component({
   selector: 'ui-cmp-chat-window',
   standalone: true,
-  imports: [ChatWindowContent, ChatWindowSearch, TranslatePipe],
+  imports: [ChatWindowContent, ChatWindowGreeting, ChatWindowSearch, TranslatePipe],
   templateUrl: './chat-window.html',
   styleUrl: './chat-window.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -16,6 +18,14 @@ import { ChatWindowSearch } from '../chat-window-search/chat-window-search';
 export class ChatWindow {
   themeService = inject(ThemeService);
   themeName = signal(this.themeService.currentThemeName());
+
+  view: string | null = null;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.paramMap.subscribe(params => {
+      this.view = params.get('view');
+    });
+  }
 
   setTheme(target: EventTarget | null) {
     const name =

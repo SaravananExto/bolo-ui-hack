@@ -1,10 +1,10 @@
-import Material from '@primeuix/themes/material';
+import Aura from '@primeuix/themes/aura';
 import { PrimeNGConfigType } from 'primeng/config';
 
 export const primengConfig: Partial<PrimeNGConfigType> = {
   ripple: true,
   theme: {
-    preset: Material,
+    preset: Aura,
   },
   inputVariant: 'filled',
   zIndex: {

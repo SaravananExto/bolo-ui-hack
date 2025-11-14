@@ -15,8 +15,3 @@ html {
 body {
   margin: 0;
 }
-
-.p-popover::after,
-.p-popover::before {
-  content: none !important;
-}
