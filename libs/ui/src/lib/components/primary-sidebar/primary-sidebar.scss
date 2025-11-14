@@ -39,6 +39,7 @@
   display: flex;
   gap: 8px;
   padding-inline-start: 12px;
+  cursor: pointer;
 }
 
 .chat-sidebar__option-text {
@@ -61,7 +62,7 @@
   align-items: center;
   gap: 8px;
   transition: width 0.3s ease;
-  background-color: #1d1d1d;
+  background-color: #4c4c4c;
 }
 
 .chat-sidebar__search-input {
@@ -130,10 +131,11 @@
   padding-inline: 12px;
   padding-block: 4px;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .chat-history__item:hover {
-  background: #1d1d1d;
+  background: #4c4c4c;
 }
 
 .chat-history__message {

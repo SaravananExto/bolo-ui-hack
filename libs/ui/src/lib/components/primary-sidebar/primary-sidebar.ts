@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output, signal } from '@angular/core';
 import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
@@ -13,6 +13,8 @@ import { MenuModule } from 'primeng/menu';
 })
 export class PrimarySidebar {
   collapsed = signal(true);
+
+  @Output() historyClicked = new EventEmitter<string>();
 
   items: MenuItem[] = [
     {
@@ -35,5 +37,9 @@ export class PrimarySidebar {
 
   toggle() {
     this.collapsed.set(!this.collapsed());
+  }
+
+  onHistoryClick() {
+    this.historyClicked.emit('123567');
   }
 }

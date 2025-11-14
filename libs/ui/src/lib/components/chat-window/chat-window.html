@@ -1,28 +1,10 @@
 <div class="chat-window-wrapper">
   <div class="chat-window">
+    @if (this.view) {
     <ui-cmp-chat-window-content class="chat-window__content"></ui-cmp-chat-window-content>
-    <!-- <ui-cmp-chat-window-greeting class="chat-window__greeting"></ui-cmp-chat-window-greeting> -->
+    } @else {
+    <ui-cmp-chat-window-greeting class="chat-window__greeting"></ui-cmp-chat-window-greeting>
+    }
     <ui-cmp-chat-window-search class="chat-window__search"></ui-cmp-chat-window-search>
-    <!-- Theme switcher and scoped theme root -->
-    <div class="chat-window-root" [attr.data-theme]="themeService.currentThemeName()">
-      <select (change)="setTheme($event.target)" style="margin-bottom: 16px">
-        @for (t of ['QUANTUM','GRAPHITE','EXOSTEEL','JADEUS','ONYX']; track t) {
-        <option [value]="t" [selected]="themeService.currentThemeName() === t">{{ t }}</option>
-        }
-      </select>
-      <div class="chat-content">
-        <!-- Example usage of CSS variables -->
-        <div
-          class="chat-bubble"
-          style="
-            background: var(--surface);
-            color: var(--text);
-            box-shadow: 0 2px 8px var(--shadow);
-          "
-        >
-          {{ 'chat.message.example' | translate }}
-        </div>
-      </div>
-    </div>
   </div>
 </div>
