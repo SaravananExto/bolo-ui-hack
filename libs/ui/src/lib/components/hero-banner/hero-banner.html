@@ -11,6 +11,13 @@
     ></ui-elm-button>
     }
   </div>
-  <h1 class="hero-banner-title">{{ title() |translate}}</h1>
+  <div class="hero-banner-theme-switcher">
+    <select (change)="changeTheme($event.target)">
+      @for (theme of themeNames; track theme) {
+      <option [value]="theme" [selected]="currentTheme() === theme">{{ theme }}</option>
+      }
+    </select>
+  </div>
+  <h1 class="hero-banner-title">{{ title() | translate }}</h1>
   <p class="hero-banner-subtitle">{{ subtitle() | translate }}</p>
 </section>
