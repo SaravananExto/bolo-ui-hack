@@ -23,7 +23,15 @@
     </div>
 
     <div class="chat-sidebar__option">
-      <img alt="History" src="assets/icons/history-icon.svg" (click)="onHistoryClick()" />
+      <button
+        type="button"
+        class="chat-sidebar__icon-button"
+        (click)="onHistoryClick()"
+        (keyup.enter)="onHistoryClick()"
+        aria-label="{{ 'sidebar.history' | translate }}"
+      >
+        <img alt="History" src="assets/icons/history-icon.svg" />
+      </button>
       <span class="chat-sidebar__option-text">{{ 'sidebar.history' | translate }}</span>
     </div>
   </div>
@@ -33,7 +41,12 @@
     <div class="chat-history">
       <h2 class="chat-history__title">{{ 'sidebar.pinned' | translate }}</h2>
       <div class="chat-history__list">
-        <div class="chat-history__item" (click)="onHistoryClick()">
+        <div
+          class="chat-history__item"
+          tabindex="0"
+          (click)="onHistoryClick()"
+          (keyup.enter)="onHistoryClick()"
+        >
           <p class="chat-history__message">{{ 'sidebar.exampleMessage' | translate }}</p>
           <button class="chat-history__menu-button" (click)="menu.toggle($event)">
             <img alt="More options" src="assets/icons/ellipses-icon.svg" />

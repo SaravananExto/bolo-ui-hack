@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { ThemeService } from '@bolo/shared-core/theme/services/theme.service';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { MenuDock, PrimarySidebar, SecondarySidebar } from '@bolo/ui/components';
 
 @Component({

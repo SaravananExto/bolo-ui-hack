@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/cor
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { TranslationService } from '@bolo/shared-core/i18n/services';
-import { TableComponent } from '@bolo/ui/elements';
 import { Tooltip } from 'primeng/tooltip';
 
+import { TableComponent } from '../../elements/table/table-component';
+
 @Component({
-  selector: 'app-dataset.component',
+  selector: 'ui-cmp-dataset',
   imports: [TableComponent, Tooltip, TranslatePipe],
   templateUrl: './dataset.component.html',
   styleUrl: './dataset.component.scss',

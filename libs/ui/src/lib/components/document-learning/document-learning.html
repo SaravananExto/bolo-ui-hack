@@ -1,30 +1,41 @@
 <div class="main-container">
   <section class="heading">
-    <div class="back-btn" (click)="navigateToChat()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 52 52" fill="none">
-        <circle cx="26" cy="26" r="25.5" stroke="var(--text)"/>
+    <button
+      class="back-btn"
+      (click)="navigateToChat()"
+      (keydown.enter)="navigateToChat()"
+      aria-label="Back"
+      type="button"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="68"
+        height="68"
+        viewBox="0 0 52 52"
+        fill="none"
+      >
+        <circle cx="26" cy="26" r="25.5" stroke="var(--text)" />
         <path
           d="M19.2939 25.2919L29.2939 15.2919C29.3868 15.199 29.4971 15.1253 29.6185 15.0751C29.7399 15.0248 29.87 14.9989 30.0014 14.9989C30.1328 14.9989 30.2629 15.0248 30.3843 15.0751C30.5057 15.1253 30.616 15.199 30.7089 15.2919C30.8018 15.3849 30.8755 15.4952 30.9258 15.6165C30.9761 15.7379 31.002 15.868 31.002 15.9994C31.002 16.1308 30.9761 16.2609 30.9258 16.3823C30.8755 16.5037 30.8018 16.614 30.7089 16.7069L21.4151 25.9994L30.7089 35.2919C30.8965 35.4796 31.002 35.7341 31.002 35.9994C31.002 36.2648 30.8965 36.5193 30.7089 36.7069C30.5213 36.8946 30.2668 37 30.0014 37C29.736 37 29.4815 36.8946 29.2939 36.7069L19.2939 26.7069C19.2009 26.6141 19.1272 26.5038 19.0768 26.3824C19.0265 26.261 19.0006 26.1309 19.0006 25.9994C19.0006 25.868 19.0265 25.7379 19.0768 25.6165C19.1272 25.4951 19.2009 25.3848 19.2939 25.2919Z"
-          fill="var(--text)" />
+          fill="var(--text)"
+        />
       </svg>
-    </div>
+    </button>
     <h2 class="title">{{'documentLearning.title'| translate}}</h2>
   </section>
 
   <section>
-  <div class="meta custom-btn-group">
-    <button class="custom-btn outlined">
-      {{'documentLearning.viewDataTables' | translate}}
-    </button>
-    <button class="custom-btn filled">
-      <span class="icon-with-text">
-        <i class="pi pi-plus"></i>
-        {{'documentLearning.addNew'|translate}}
-      </span>
-      <i class="pi pi-angle-down"></i>
-    </button>
-  </div>
-</section>
+    <div class="meta custom-btn-group">
+      <button class="custom-btn outlined">{{'documentLearning.viewDataTables' | translate}}</button>
+      <button class="custom-btn filled">
+        <span class="icon-with-text">
+          <i class="pi pi-plus"></i>
+          {{'documentLearning.addNew'|translate}}
+        </span>
+        <i class="pi pi-angle-down"></i>
+      </button>
+    </div>
+  </section>
   <div class="tbl">
     <ui-elm-table [rows]="data" [headers]="headers"></ui-elm-table>
   </div>

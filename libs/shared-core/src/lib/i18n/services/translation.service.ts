@@ -21,8 +21,11 @@ export class TranslationService {
   private cache = new Map<string, Map<string, string>>();
 
   constructor() {
-    // eager load default locale
-    void this.loadTranslations(this._locale());
+    // Load locale from localStorage if available, else use default
+    const savedLocale = localStorage.getItem('locale');
+    const initialLocale = savedLocale || this.defaultLocale;
+    this._locale.set(initialLocale);
+    void this.loadTranslations(initialLocale);
   }
 
   async loadTranslations(locale: string): Promise<Map<string, string>> {
@@ -41,6 +44,7 @@ export class TranslationService {
     this.cache.set(locale, translations);
     this._current.set(translations);
     this._locale.set(locale);
+    localStorage.setItem('locale', locale); // Persist locale
     return translations;
   }
 
@@ -62,6 +66,7 @@ export class TranslationService {
   }
 
   async switchLocale(locale: string): Promise<Map<string, string>> {
+    localStorage.setItem('locale', locale); // Persist locale on switch
     return this.loadTranslations(locale);
   }
 

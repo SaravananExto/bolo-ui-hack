@@ -20,9 +20,7 @@
       <tr>
         @for(col of columns; track col){
         <td>
-          <div class="{{row[col['field']].length > 28 ? 'desc' : ''}}">
-            {{row[col['field']]}}
-          </div>
+          <div class="{{row[col['field']].length > 28 ? 'desc' : ''}}">{{row[col['field']]}}</div>
         </td>
         }
       </tr>
@@ -38,20 +36,37 @@
   <div class="custom-pagination">
     <span>{{ 'table.pageSize'| translate}}</span>
     <div class="table-page-size-wrapper">
-    <p-select 
-      [options]="paginationOption"
-      optionLabel="label"
-      optionValue="value"
-      [(ngModel)]="rowsPerPage"
-      (ngModelChange)="onRowsPerPageChange()"
-      class="table-page-size"
-      [showClear]="false">
-    </p-select>
-  </div>
-    <i (click)="prevPage()"  class="pi pi-angle-left"></i>
+      <p-select
+        [options]="paginationOption"
+        optionLabel="label"
+        optionValue="value"
+        [(ngModel)]="rowsPerPage"
+        (ngModelChange)="onRowsPerPageChange()"
+        class="table-page-size"
+        [showClear]="false"
+      >
+      </p-select>
+    </div>
+    <i
+      tabindex="0"
+      role="button"
+      class="pi pi-angle-left"
+      (click)="prevPage()"
+      (keyup.enter)="prevPage()"
+      (keydown.space)="prevPage()"
+      aria-label="Previous page"
+    ></i>
     <span class="page-report">
       {{'table.page' | translate}} {{currentPage}} of {{totalPages}}
     </span>
-    <i class="pi pi-angle-right" (click)="nextPage()"></i>
+    <i
+      tabindex="0"
+      role="button"
+      class="pi pi-angle-right"
+      (click)="nextPage()"
+      (keyup.enter)="nextPage()"
+      (keydown.space)="nextPage()"
+      aria-label="Next page"
+    ></i>
   </div>
 </div>

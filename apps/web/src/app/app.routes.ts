@@ -4,7 +4,7 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'login',
-    loadComponent: () => import('@bolo/ui/components/login/login').then(m => m.LoginComponent),
+    loadComponent: () => import('@bolo/ui/components/login/login').then(m => m.Login),
   },
   {
     path: 'chat',

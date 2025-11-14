@@ -31,8 +31,9 @@
 
     <div class="settings__form">
       <div class="settings__field">
-        <label class="settings__label">Switch Companies</label>
+        <label class="settings__label" for="company-select">Switch Companies</label>
         <p-select
+          id="company-select"
           class="settings__select"
           [options]="companies"
           [(ngModel)]="selectedCompany"
@@ -41,8 +42,9 @@
       </div>
 
       <div class="settings__field">
-        <label class="settings__label">Language</label>
+        <label class="settings__label" for="language-select">Language</label>
         <p-select
+          id="language-select"
           class="settings__select"
           [options]="languages"
           [(ngModel)]="selectedLanguage"
@@ -51,8 +53,9 @@
       </div>
 
       <div class="settings__field">
-        <label class="settings__label">Date Format</label>
+        <label class="settings__label" for="date-format-select">Date Format</label>
         <p-select
+          id="date-format-select"
           class="settings__select"
           [options]="dateFormats"
           [(ngModel)]="selectedDateFormat"
@@ -60,11 +63,10 @@
         />
       </div>
 
-      <span class="settings__qr">QR CODE</span>
-
       <div class="settings__field">
-        <label class="settings__label">Theme Color</label>
+        <label class="settings__label" for="theme-color-select">Theme Color</label>
         <p-select
+          id="theme-color-select"
           class="settings__select"
           [options]="themeColors"
           [(ngModel)]="selectedThemeColor"
@@ -73,8 +75,9 @@
       </div>
 
       <div class="settings__field">
-        <label class="settings__label">Accent Color</label>
+        <label class="settings__label" for="accent-color-select">Accent Color</label>
         <p-select
+          id="accent-color-select"
           class="settings__select"
           [options]="accentColors"
           [(ngModel)]="selectedAccentColor"

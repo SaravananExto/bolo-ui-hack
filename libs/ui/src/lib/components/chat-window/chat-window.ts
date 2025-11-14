@@ -20,7 +20,9 @@ export class ChatWindow {
 
   view: string | null = null;
 
-  constructor(private route: ActivatedRoute) {
+  private route = inject(ActivatedRoute);
+
+  constructor() {
     this.route.paramMap.subscribe(params => {
       this.view = params.get('view');
     });

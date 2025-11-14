@@ -1,13 +1,13 @@
 import { NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { TranslationService } from '@bolo/shared-core/i18n/services';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 
-import { Router } from '@angular/router';
 import { Button as UiElmButton } from '../../elements/button/button';
 import { ResetPasswordComponent } from '../reset-password/reset-password';
 
@@ -28,7 +28,7 @@ import { ResetPasswordComponent } from '../reset-password/reset-password';
   styleUrl: './login.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent {
+export class Login {
   langOptions = [
     { label: 'English', value: 'en' },
     { label: 'French', value: 'fr' },
@@ -48,8 +48,8 @@ export class LoginComponent {
   showPassword = signal(false);
   showReset = signal(false);
 
-  usernameValue = '';
-  passwordValue = '';
+  usernameValue = 'sterling.hill@gaeaglobal.com';
+  passwordValue = 'Bolo@123';
   usernameError = signal('');
   passwordError = signal('');
 

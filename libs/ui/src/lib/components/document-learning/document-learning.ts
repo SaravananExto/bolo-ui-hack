@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { TranslationService } from '@bolo/shared-core/i18n/services';
-import { TableComponent } from '@bolo/ui/elements';
 import { ButtonModule } from 'primeng/button';
 
+import { TableComponent } from '../../elements/table/table-component';
+
 @Component({
-  selector: 'lib-document-learning',
+  selector: 'ui-cmp-document-learning',
   imports: [ButtonModule, TableComponent, TranslatePipe],
   templateUrl: './document-learning.html',
   styleUrl: './document-learning.scss',

@@ -1,3 +1,4 @@
+export * from './locales';
 export * from './mocks';
 export * from './pipes';
 export * from './services';
