@@ -6,18 +6,10 @@
     <div class="bar-right">
       <span class="sign-up">{{ 'login.signup' | translate }}</span>
       <div class="login-btn-lang-group">
-        <ui-elm-button
-          class="login-btn"
-          [text]="('login.button' | translate)"
-          [ariaLabel]="('login.button' | translate)"
-          (click)="showDialog.set(true)"
-        />
-        <select
-          class="lang-select"
-          [ngModel]="selectedLang()"
-          (ngModelChange)="switchLocale($event)"
-          aria-label="Select Language"
-        >
+        <ui-elm-button class="login-btn" [text]="('login.button' | translate)"
+          [ariaLabel]="('login.button' | translate)" (click)="showDialog.set(true)" />
+        <select class="lang-select" [ngModel]="selectedLang()" (ngModelChange)="switchLocale($event)"
+          aria-label="Select Language">
           @for (lng of ['en', 'fr', 'es', 'kn', 'ta', 'te']; track lng) {
           <option [value]="lng">{{ getLangKey(lng)}}</option>
           }
@@ -32,48 +24,30 @@
       <h2 class="dialog-title">{{ 'login.button' | translate }}</h2>
       <form (ngSubmit)="login()" autocomplete="on">
         <label class="dialog-label" for="username">{{ 'login.usernameOrEmail' | translate }}</label>
-        <input
-          pInputText
-          class="dialog-input"
-          id="username"
-          type="text"
-          placeholder="sterling.hill@gaeaglobal.com"
-          [(ngModel)]="usernameValue"
-          name="username"
-          autocomplete="username"
-        />
+        <input class="dialog-input" id="username" type="text" placeholder="sterling.hill@gaeaglobal.com"
+          [(ngModel)]="usernameValue" name="username" autocomplete="nope" />
         @if (usernameError()) {
         <div class="input-error">{{ usernameError() }}</div>
         }
         <label class="dialog-label" for="password">{{ 'login.password' | translate }}</label>
-        <p-password
-          class="dialog-input"
-          inputId="password"
-          [feedback]="false"
-          [toggleMask]="true"
-          [(ngModel)]="passwordValue"
-          name="password"
-          autocomplete="current-password"
-          [inputStyle]="{width: '95%', height: '44px', fontSize: '16px', borderRadius: '14px', paddingRight: '10px'}"
-          [style]="{width: '100%'}"
-        >
-        </p-password>
+        <div class="password-wrapper">
+          <input [type]="showPassword() ? 'text' : 'password'" name="password" autocomplete="new-password"
+            [(ngModel)]="passwordValue" (keyup.enter)="login()" class="dialog-input" id="password"
+            placeholder="••••••••" />
+          <button type="button" class="eye-icon" (click)="showPassword.set(!showPassword())">
+            <i class="pi" [ngClass]="showPassword() ? 'pi-eye-slash' : 'pi-eye'"></i>
+          </button>
+        </div>
         @if (passwordError()) {
         <div class="input-error">{{ passwordError() }}</div>
         }
         <div class="dialog-row">
-          <label class="remember-me"
-            ><input type="checkbox" /> {{ 'login.rememberMe' | translate }}</label
-          >
-          <a class="forgot-password" href="#" (click)="$event.preventDefault(); openReset()"
-            >{{ 'login.forgotPassword' | translate }}</a
-          >
+          <label class="remember-me"><input type="checkbox" /> {{ 'login.rememberMe' | translate }}</label>
+          <a class="forgot-password" href="#" (click)="$event.preventDefault(); openReset()">{{ 'login.forgotPassword' |
+            translate }}</a>
         </div>
-        <ui-elm-button
-          class="dialog-login-btn"
-          [text]="('login.button' | translate)"
-          [ariaLabel]="('login.button' | translate)"
-        />
+        <ui-elm-button class="dialog-login-btn" [text]="('login.button' | translate)"
+          [ariaLabel]="('login.button' | translate)" />
       </form>
       <div class="dialog-divider-row">
         <div class="dialog-divider"></div>
@@ -82,11 +56,7 @@
       </div>
       <div class="dialog-social-row">
         <button class="social-btn microsoft-btn">
-          <img
-            src="assets/images/microsoft_icon.png"
-            alt="Microsoft"
-            class="social-icon"
-          />Microsoft
+          <img src="assets/images/microsoft_icon.png" alt="Microsoft" class="social-icon" />Microsoft
         </button>
         <button class="social-btn google-btn">
           <img src="assets/images/google_icon.png" alt="Google" class="social-icon" />Google
@@ -97,10 +67,7 @@
   </div>
   } @if (showDialog() && showReset()) {
   <div class="login-dialog-overlay">
-    <ui-cmp-reset-password
-      (returnToLogin)="closeReset()"
-      (closeAll)="closeAllDialogs()"
-    ></ui-cmp-reset-password>
+    <ui-cmp-reset-password (returnToLogin)="closeReset()" (closeAll)="closeAllDialogs()"></ui-cmp-reset-password>
   </div>
   }
 </div>

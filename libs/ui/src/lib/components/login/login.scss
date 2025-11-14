@@ -59,7 +59,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-left: 100px;
+  margin-left: 300px;
 }
 
 .bar-right {
@@ -307,6 +307,8 @@ form .dialog-login-btn {
   margin-top: auto;
   margin-bottom: 0;
   position: static;
+  padding-bottom: 8px;
+  color: #3a3a3a !important;
 }
 
 .input-error {
@@ -330,4 +332,31 @@ form .dialog-login-btn {
   top: 50% !important;
   right: 12px !important;
   transform: translateY(-40%) !important;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+.password-wrapper .dialog-input {
+  padding-right: 40px;
+}
+.eye-icon {
+  position: absolute;
+  top: 40%;
+  right: 14px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  color: #939393;
+  z-index: 2;
+}
+.eye-icon:focus {
+  outline: 2px solid #4468fd;
 }

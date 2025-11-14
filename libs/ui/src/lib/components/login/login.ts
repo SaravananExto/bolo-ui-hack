@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
@@ -20,6 +21,7 @@ import { ResetPasswordComponent } from '../reset-password/reset-password';
     ResetPasswordComponent,
     UiElmButton,
     TranslatePipe,
+    NgClass,
   ],
   templateUrl: './login.html',
   styleUrl: './login.scss',
