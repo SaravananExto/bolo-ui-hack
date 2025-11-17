@@ -14,6 +14,8 @@ import { MenuModule } from 'primeng/menu';
 export class PrimarySidebar {
   collapsed = signal(true);
 
+  @Output() logoClick = new EventEmitter<void>();
+  @Output() newConversationClick = new EventEmitter<void>();
   @Output() historyClicked = new EventEmitter<string>();
 
   items: MenuItem[] = [
@@ -37,6 +39,14 @@ export class PrimarySidebar {
 
   toggle() {
     this.collapsed.set(!this.collapsed());
+  }
+
+  onNewConversationClick() {
+    this.newConversationClick.emit();
+  }
+
+  onLogoClick() {
+    this.logoClick.emit();
   }
 
   onHistoryClick() {

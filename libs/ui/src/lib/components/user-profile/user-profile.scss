@@ -1,0 +1,130 @@
+/* ROOT WRAPPER */
+:host ::ng-deep .user-profile {
+  background: var(--secondary-bg);
+  padding: 24px;
+  .p-ink {
+    display: none;
+  }
+
+  .p-tab {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.28px;
+    color: var(--user-profile-label-text);
+    border-color: var(--user-profile-tab-hover);
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .p-tab-active {
+    color: var(--user-profile-label-text);
+  }
+
+  .p-tablist-active-bar {
+    background-color: var(--user-profile-active-tab);
+  }
+
+  .p-tablist,
+  .p-tabpanels {
+    background: var(--secondary-bg);
+    padding: 0;
+  }
+
+  .p-tablist-nav-button {
+    box-shadow: none;
+    background-color: var(--secondary-bg);
+  }
+
+  .p-tab:not(.p-tab-active):not(.p-disabled):hover {
+    color: var(--user-profile-label-text);
+    border-color: var(--user-profile-tab-hover);
+  }
+}
+
+/* FORM WRAPPER */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 36px;
+}
+
+/* FIELDS GROUP */
+.profile-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* INDIVIDUAL FIELD */
+.profile-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-form__label {
+  font-family: Arial;
+  font-size: 14px;
+  color: var(--settings-select-label-text);
+  padding-left: 12px;
+}
+
+/* INPUT STYLES */
+.profile-form__input {
+  &.p-inputtext.p-variant-filled {
+    color: var(--user-profile-label-text);
+    background-color: var(--secondary-bg);
+
+    &:enabled:hover,
+    &:enabled:focus {
+      color: var(--user-profile-label-text);
+      background-color: var(--secondary-bg);
+      border-color: var(--user-profile-input-hover);
+    }
+  }
+
+  &.p-inputtext {
+    border-radius: 60px;
+    border: 1px solid var(--user-profile-input-border);
+    font-family: Arial;
+
+    &:focus {
+      border-color: var(--user-profile-input-border);
+      box-shadow: none;
+    }
+  }
+}
+
+/* ACTION BUTTONS */
+.profile-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-self: center;
+}
+
+.profile-actions {
+  button {
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 14px;
+  }
+
+  .profile-actions__cancel {
+    border: 1px solid var(--user-profile-button-cancel-border);
+    background: transparent;
+    color: var(--user-profile-button-cancel-text);
+  }
+
+  .profile-actions__save {
+    background: var(--user-profile-button-save);
+    color: var(--user-profile-button-save-text);
+  }
+}

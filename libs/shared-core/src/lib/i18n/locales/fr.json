@@ -56,5 +56,18 @@
   "user_profile.settings.privacy": "Confidentialité",
   "user_profile.settings.support": "Support",
   "job_status.title": "Statut de l'emploi",
-  "document_manager.title": "Gestionnaire de documents"
+  "document_manager.title": "Gestionnaire de documents",
+  "user_profile.first_name": "Prénom",
+  "user_profile.last_name": "Nom de famille",
+  "user_profile.user_name": "Nom d'utilisateur",
+  "user_profile.email": "E-mail",
+  "user_profile.user_role": "Rôle d'utilisateur",
+  "user_profile.work_phone": "Téléphone professionnel",
+  "user_profile.actions.cancel": "Annuler",
+  "user_profile.actions.save": "Enregistrer",
+  "user_profile.change_password.old": "Ancien mot de passe",
+  "user_profile.change_password.new": "Nouveau mot de passe",
+  "user_profile.change_password.retype": "Retaper le nouveau mot de passe",
+  "user_profile.tabs.account": "Compte utilisateur",
+  "user_profile.tabs.change_password": "Changer le mot de passe"
 }

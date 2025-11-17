@@ -56,5 +56,18 @@
   "user_profile.settings.privacy": "Terms and Privacy",
   "user_profile.settings.support": "Customer Support",
   "job_status.title": "Job Status",
-  "document_manager.title": "Document Manager"
+  "document_manager.title": "Document Manager",
+  "user_profile.first_name": "First Name",
+  "user_profile.last_name": "Last Name",
+  "user_profile.user_name": "User Name",
+  "user_profile.email": "Email",
+  "user_profile.user_role": "User Role",
+  "user_profile.work_phone": "Work Phone",
+  "user_profile.actions.cancel": "Cancel",
+  "user_profile.actions.save": "Save",
+  "user_profile.change_password.old": "Old Password",
+  "user_profile.change_password.new": "New Password",
+  "user_profile.change_password.retype": "Re-type New Password",
+  "user_profile.tabs.account": "User Account",
+  "user_profile.tabs.change_password": "Change Password"
 }

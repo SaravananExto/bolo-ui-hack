@@ -22,8 +22,11 @@
 }
 
 /* Header */
-.chat-sidebar__header img {
-  display: block;
+.chat-sidebar__header {
+  cursor: pointer;
+  img {
+    display: block;
+  }
 }
 
 /* Options */

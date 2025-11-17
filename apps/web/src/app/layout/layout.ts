@@ -22,6 +22,14 @@ export class Layout implements OnInit {
     this.themeService.init();
   }
 
+  onLogoClick() {
+    this.router.navigate(['chat']);
+  }
+
+  onNewConversationClick() {
+    this.router.navigate(['chat']);
+  }
+
   onHistoryClicked(event: string) {
     this.router.navigate(['chat', 'history', `${event}`]);
   }
