@@ -9,6 +9,7 @@ import { ActionBar } from '../action-bar/action-bar';
   standalone: true,
   imports: [ButtonModule, TranslatePipe, ActionBar],
   templateUrl: './sharepoint.html',
+  styleUrl: './sharepoint.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SharepointTab {}

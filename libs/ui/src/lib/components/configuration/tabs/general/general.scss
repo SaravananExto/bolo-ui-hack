@@ -7,9 +7,9 @@
 
 .general-tab-row {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   justify-content: flex-start;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -20,7 +20,7 @@ p-select.general-dropdown {
   font-family: Arial, sans-serif;
   font-size: 19px;
   border-radius: 10px;
-  min-width: 220px;
+  max-width: 220px;
   height: 40px;
   border: 1px solid #aaa;
   box-shadow: none;
@@ -28,8 +28,8 @@ p-select.general-dropdown {
 }
 
 .general-tab-checkboxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   width: 100%;
 }
@@ -40,10 +40,51 @@ p-select.general-dropdown {
   gap: 0.5rem;
 }
 
+.general-tab-select-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.general-dropdown-label {
+  font-family: Arial;
+  font-size: 14px;
+  color: var(--settings-select-label-text);
+  padding-inline-start: 12px;
+}
+
+:host ::ng-deep .general-dropdown {
+  width: 100%;
+  background: transparent !important;
+  border-radius: 18px;
+  border: 1px solid var(--settings-select-border) !important;
+  padding-inline: 4px;
+
+  .p-select-label {
+    font-family: Arial;
+    font-size: 16px;
+    color: var(--settings-select-option-text);
+  }
+
+  .p-select-option {
+    font-family: Arial;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .p-select-list-container {
+    background: #303030;
+
+    .p-select-option.p-select-option-selected {
+      background: #27272a;
+    }
+  }
+}
+
 .general-checkbox-label {
   font-family: Arial, sans-serif;
   font-size: 19px;
-  color: #222;
+  color: #fff;
 }
 
 .general-tab-logo {
@@ -64,7 +105,7 @@ p-select.general-dropdown {
   width: 340px;
   height: 40px;
   border-radius: 18px;
-  border: 1px solid #AAAAAA;
+  border: 1px solid #aaaaaa;
   font-size: 19px;
   font-family: Arial, sans-serif;
   padding: 0 1rem;

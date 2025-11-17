@@ -3,9 +3,10 @@ import { Router, RouterModule } from '@angular/router';
 import { ThemeService } from '@bolo/shared-core/theme/services/theme.service';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { MenuDock, PrimarySidebar, SecondarySidebar } from '@bolo/ui/components';
+import { Configuration } from '@bolo/ui/components/configuration/configuration';
 
 @Component({
-  imports: [RouterModule, PrimarySidebar, SecondarySidebar, MenuDock],
+  imports: [RouterModule, PrimarySidebar, SecondarySidebar, MenuDock, Configuration],
   standalone: true,
   selector: 'app-layout',
   templateUrl: './layout.html',

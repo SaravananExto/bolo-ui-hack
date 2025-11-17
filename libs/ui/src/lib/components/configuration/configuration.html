@@ -1,7 +1,5 @@
 <div #root class="configuration-panel" [class.compact]="compact">
-  <div class="configuration-title">
-    {{ 'configuration.title' | translate }}
-  </div>
+  <div class="configuration-title">{{ 'configuration.title' | translate }}</div>
   <p-tabs
     [value]="activeTab()"
     scrollable
@@ -9,28 +7,19 @@
     class="configuration-tabs"
   >
     <p-tablist>
-      <p-tab
-        [value]="0"
-        aria-label="{{ 'configuration.tabs.general' | translate }}"
-      >
+      <p-tab [value]="0" aria-label="{{ 'configuration.tabs.general' | translate }}">
         {{ 'configuration.tabs.general' | translate }}
       </p-tab>
-      <p-tab
-        [value]="1"
-        aria-label="{{ 'configuration.tabs.googleDrive' | translate }}"
-      >
+      <p-tab [value]="1" aria-label="{{ 'configuration.tabs.googleDrive' | translate }}">
         {{ 'configuration.tabs.googleDrive' | translate }}
       </p-tab>
-      <p-tab
-        [value]="2"
-        aria-label="{{ 'configuration.tabs.sharePoint' | translate }}"
-      >
+      <p-tab [value]="2" aria-label="{{ 'configuration.tabs.sharePoint' | translate }}">
         {{ 'configuration.tabs.sharePoint' | translate }}
       </p-tab>
     </p-tablist>
     <p-tabpanels>
       <p-tabpanel [value]="0">
-        <ui-cmp-general-tab></ui-cmp-general-tab>
+        <ui-cmp-general-tab class="general-tab-wrapper"></ui-cmp-general-tab>
       </p-tabpanel>
       <p-tabpanel [value]="1">
         <ui-cmp-google-drive-tab></ui-cmp-google-drive-tab>
