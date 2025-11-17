@@ -54,5 +54,7 @@
   "user_profile.settings.theme_color": "ಥೀಮ್ ಬಣ್ಣ",
   "user_profile.settings.accent_color": "ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ",
   "user_profile.settings.privacy": "ಗೌಪ್ಯತೆ",
-  "user_profile.settings.support": "ಬೆಂಬಲ"
+  "user_profile.settings.support": "ಬೆಂಬಲ",
+  "job_status.title": "ಕೆಲಸದ ಸ್ಥಿತಿ",
+  "document_manager.title": "ಡಾಕ್ಯುಮೆಂಟ್ ನಿರ್ವಾಹಕ"
 }

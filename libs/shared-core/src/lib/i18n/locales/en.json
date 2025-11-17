@@ -54,5 +54,7 @@
   "user_profile.settings.theme_color": "Theme Color",
   "user_profile.settings.accent_color": "Accent Color",
   "user_profile.settings.privacy": "Terms and Privacy",
-  "user_profile.settings.support": "Customer Support"
+  "user_profile.settings.support": "Customer Support",
+  "job_status.title": "Job Status",
+  "document_manager.title": "Document Manager"
 }

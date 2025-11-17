@@ -5,11 +5,20 @@ import { TranslationService } from '@bolo/shared-core/i18n/services';
 import { ButtonModule } from 'primeng/button';
 import { SelectModule } from 'primeng/select';
 import { TableModule } from 'primeng/table';
+import { TagModule } from 'primeng/tag';
 import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'ui-elm-table',
-  imports: [TableModule, TooltipModule, ButtonModule, SelectModule, FormsModule, TranslatePipe],
+  imports: [
+    TableModule,
+    TooltipModule,
+    ButtonModule,
+    SelectModule,
+    FormsModule,
+    TranslatePipe,
+    TagModule,
+  ],
   templateUrl: './table-component.html',
   styleUrl: './table-component.scss',
   standalone: true,
@@ -17,7 +26,7 @@ import { TooltipModule } from 'primeng/tooltip';
 })
 export class TableComponent implements OnInit {
   @Input() rows: Record<string, any>[] = [];
-  @Input() headers: Record<string, string>[] = [];
+  @Input() headers: Record<string, any>[] = [];
 
   private translateSvc = inject(TranslationService);
 
@@ -66,5 +75,32 @@ export class TableComponent implements OnInit {
   }
   onRowsPerPageChange() {
     this.currentPage = 1;
+  }
+
+  checkStyling(column: Record<string, any>) {
+    if (column['cellStyling']) {
+      return true;
+    }
+    return false;
+  }
+
+  getSeverity(status: string) {
+    switch (status) {
+      case 'Completed':
+        return 'success';
+      case 'Failed':
+        return 'danger';
+      case 'In Progress':
+        return 'warn';
+      default:
+        return null;
+    }
+  }
+
+  checkIcon(col: Record<string, any>) {
+    if (col['icon']) {
+      return true;
+    }
+    return false;
   }
 }

@@ -38,6 +38,9 @@ export class MenuDock {
     {
       label: 'Jobs',
       icon: 'assets/icons/job-status-icon.svg',
+      command: () => {
+        this.navigateTo.emit('chat/job-status');
+      },
     },
     {
       label: 'Document Learning',
@@ -49,6 +52,9 @@ export class MenuDock {
     {
       label: 'Document Manager',
       icon: 'assets/icons/document-manager-icon.svg',
+      command: () => {
+        this.navigateTo.emit('chat/document-manager');
+      },
     },
   ];
 }

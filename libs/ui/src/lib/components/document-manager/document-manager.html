@@ -21,22 +21,23 @@
         />
       </svg>
     </div>
-    <h2 class="title">{{'documentLearning.title'| translate}}</h2>
+    <h2 class="title">{{'document_manager.title'| translate}}</h2>
   </section>
 
-  <section>
-    <div class="meta custom-btn-group">
-      <button class="custom-btn outlined">{{'documentLearning.viewDataTables' | translate}}</button>
-      <button class="custom-btn filled">
-        <span class="icon-with-text">
-          <i class="pi pi-plus"></i>
-          {{'documentLearning.addNew'|translate}}
-        </span>
-        <i class="pi pi-angle-down"></i>
-      </button>
+  <section class="meta">
+    <div class="breadcrumb">
+      <p-breadcrumb [model]="breadCrumbItems">
+      </p-breadcrumb>
+    </div>
+    <div class="action-icons">
+      <i class="pi pi-cloud-upload" pTooltip="Upload" tooltipPosition="top"></i>
+      <i class="pi pi-folder-plus" pTooltip="New Folder" tooltipPosition="top"></i>
+      <i class="pi pi-list" pTooltip="List View" tooltipPosition="top"></i>
     </div>
   </section>
+
   <div class="tbl">
     <ui-elm-table [rows]="data" [headers]="headers"></ui-elm-table>
   </div>
+
 </div>

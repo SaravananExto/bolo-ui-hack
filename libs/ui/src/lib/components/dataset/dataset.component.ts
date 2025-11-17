@@ -36,7 +36,7 @@ export class DatasetComponent implements OnInit {
   }
 
   navigateToChat() {
-    this.router.navigate(['']);
+    this.router.navigate(['chat']);
   }
   private sampleRows: Record<string, any>[] = [
     {

@@ -1,0 +1,54 @@
+.main-container {
+  height: 100vh;
+  background: var(--bg);
+
+  .heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    padding-top: 7.5rem;
+    align-items: center;
+
+    .back-btn {
+      cursor: pointer;
+      padding-left: 5rem;
+    }
+
+    .title {
+      color: var(--text);
+      font-size: 2rem;
+      font-weight: 300;
+      justify-self: center;
+    }
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0 6rem 0 5.3rem;
+    padding-top: 3rem;
+
+    .action-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.breadcrumb ::ng-deep .p-breadcrumb {
+  background: var(--bg);
+  --p-breadcrumb-item-color: var(--text);
+  --p-breadcrumb-item-hover-color: var(--text-muted);
+  --p-breadcrumb-separator-color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--text-muted);
+  text-decoration-thickness: 0.1rem;
+}
+
+.tbl {
+  margin: 0 5rem 0 5rem;
+}

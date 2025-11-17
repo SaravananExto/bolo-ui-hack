@@ -54,5 +54,7 @@
   "user_profile.settings.theme_color": "థీమ్ రంగు",
   "user_profile.settings.accent_color": "యాక్సెంట్ రంగు",
   "user_profile.settings.privacy": "గోప్యత",
-  "user_profile.settings.support": "సహాయం"
+  "user_profile.settings.support": "సహాయం",
+  "job_status.title": "ఉద్యోగ స్థితి",
+  "document_manager.title": "డాక్యుమెంట్ మేనేజర్"
 }
