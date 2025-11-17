@@ -54,5 +54,7 @@
   "user_profile.settings.theme_color": "Color del tema",
   "user_profile.settings.accent_color": "Color de acento",
   "user_profile.settings.privacy": "Privacidad",
-  "user_profile.settings.support": "Soporte"
+  "user_profile.settings.support": "Soporte",
+  "job_status.title": "Estado del Trabajo",
+  "document_manager.title": "Gestor de documentos"
 }

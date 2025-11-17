@@ -28,6 +28,14 @@ export const appRoutes: Routes = [
         path: 'document-learning',
         loadComponent: () => import('@bolo/ui/components').then(m => m.DocumentLearning),
       },
+      {
+        path: 'job-status',
+        loadComponent: () => import('@bolo/ui/components').then(m => m.JobStatus),
+      },
+      {
+        path: 'document-manager',
+        loadComponent: () => import('@bolo/ui/components').then(m => m.DocumentManager),
+      },
     ],
   },
   { path: '**', loadComponent: () => import('@bolo/ui/components').then(c => c.NotFound) },

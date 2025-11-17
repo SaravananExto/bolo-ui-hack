@@ -47,8 +47,9 @@
       cursor: pointer;
       transition: box-shadow 0.15s;
       box-shadow: 0 1.5px 6px var(--border);
+      max-width: fit-content;
       height: 2.3rem;
-      width: 10.6rem;
+      min-width: 10.6rem;
       justify-content: center;
     }
 
@@ -90,6 +91,6 @@
 
   .tbl {
     margin: 0 5rem 0 5rem;
-    padding-top: 0.75rem;
+    padding-top: 0.9rem;
   }
 }

@@ -1,15 +1,17 @@
 <div class="table-shell">
-  <p-table [value]="pagedData" [columns]="columns" class="custom-table">
+  <p-table [value]="pagedData" [columns]="columns" class="custom-table" [resizableColumns]="true">
     <ng-template pTemplate="header">
       <tr>
         @for(col of columns; track col['field']){
         <th>
           <div class="header-layout">
             {{ col['header'] }}
-            <div class="header-icons">
+            @if(!col['nofilter']){
+              <div class="header-icons">
               <i class="pi pi-filter" pTooltip="Filter" tooltipPosition="right"></i>
               <i class="pi pi-ellipsis-v" pTooltip="Options" tooltipPosition="right"></i>
             </div>
+            }
           </div>
         </th>
         }
@@ -19,9 +21,26 @@
     <ng-template pTemplate="body" let-row>
       <tr>
         @for(col of columns; track col){
-        <td>
+          @if(checkStyling(col)){
+            <td>
+             <p-tag [value]="row[col['field']]" [severity]="getSeverity(row[col['field']])" class="tags"></p-tag>
+            </td>
+          }
+          @else if (checkIcon(col)) {
+            @if(row[col['field']].length > 1) {
+              <td class="icon-text">
+              <i class="{{col['icon']}}"></i>
+              <p>{{row[col['field']]}}</p>
+            </td>
+            }@else {
+              <td>
+                <i class="{{col['icon']}} icon"></i>
+              </td>
+            }
+          }
+        @else{<td>
           <div class="{{row[col['field']].length > 28 ? 'desc' : ''}}">{{row[col['field']]}}</div>
-        </td>
+        </td>}
         }
       </tr>
     </ng-template>

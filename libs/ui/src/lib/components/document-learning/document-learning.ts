@@ -34,7 +34,7 @@ export class DocumentLearning implements OnInit {
   }
 
   navigateToChat() {
-    this.router.navigate(['']);
+    this.router.navigate(['chat']);
   }
 
   private columns = [

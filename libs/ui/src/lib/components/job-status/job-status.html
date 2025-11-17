@@ -1,4 +1,5 @@
 <div class="main-container">
+
   <section class="heading">
     <div
       class="back-btn"
@@ -21,22 +22,11 @@
         />
       </svg>
     </div>
-    <h2 class="title">{{'documentLearning.title'| translate}}</h2>
+    <h2 class="title">{{'job_status.title'| translate}}</h2>
   </section>
 
-  <section>
-    <div class="meta custom-btn-group">
-      <button class="custom-btn outlined">{{'documentLearning.viewDataTables' | translate}}</button>
-      <button class="custom-btn filled">
-        <span class="icon-with-text">
-          <i class="pi pi-plus"></i>
-          {{'documentLearning.addNew'|translate}}
-        </span>
-        <i class="pi pi-angle-down"></i>
-      </button>
-    </div>
-  </section>
   <div class="tbl">
     <ui-elm-table [rows]="data" [headers]="headers"></ui-elm-table>
   </div>
+
 </div>

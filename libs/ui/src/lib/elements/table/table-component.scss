@@ -10,6 +10,22 @@
     justify-content: space-between;
     margin: 0 0.75rem 0 0.75rem;
   }
+
+  .icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    .pi {
+      font-size: 1rem;
+    }
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .custom-table ::ng-deep .p-datatable-thead > tr > th {
@@ -18,6 +34,8 @@
   font-weight: 600;
   height: 3rem;
   border-bottom: none;
+  max-width: 30rem;
+  min-width: fit-content;
 }
 
 .custom-table ::ng-deep .p-datatable-tbody > tr > td {
@@ -26,10 +44,20 @@
   background: var(--surface, rgb(56, 55, 55));
   vertical-align: middle;
   border-bottom: none;
+  max-width: 30rem;
+  min-width: fit-content;
+  height: 3.2rem;
 }
 
-:host ::ng-deep .p-datatable-tbody > tr:nth-child(odd) > td {
+.custom-table ::ng-deep .p-datatable-tbody > tr:nth-child(odd) > td {
   background: var(--bg, #4c4c4c);
+}
+
+.custom-table ::ng-deep .p-tag {
+  width: 100%;
+  height: 100%;
+  --p-tag-border-radius: 1rem;
+  --p-tag-padding: 0.3rem;
 }
 
 .desc {
@@ -44,7 +72,6 @@
   color: var(--text);
 }
 
-/* Responsive tweaks */
 @media (max-width: 800px) {
   .desc {
     max-width: 10rem;

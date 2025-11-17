@@ -54,5 +54,7 @@
   "user_profile.settings.theme_color": "தீம் நிறம்",
   "user_profile.settings.accent_color": "அக்சென்ட் நிறம்",
   "user_profile.settings.privacy": "தனியுரிமை",
-  "user_profile.settings.support": "ஆதரவு"
+  "user_profile.settings.support": "ஆதரவு",
+  "job_status.title": "பணி நிலை",
+  "document_manager.title": "ஆவண மேலாளர்"
 }
