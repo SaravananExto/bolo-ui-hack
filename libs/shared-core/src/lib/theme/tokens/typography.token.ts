@@ -74,6 +74,17 @@ export const QUANTUM: ThemeConfig = {
     '--settings-footer-text': '#3A3A3A',
     '--settings-select-border': '#3A3A3A',
     '--settings-border': '#CBCBCB',
+
+    '--user-profile-label-text': 'var(--text)',
+    '--user-profile-input-hover': 'var(--text)',
+    '--user-profile-input-border': 'var(--text)',
+    '--user-profile-active-tab': '#4B4CE3',
+    '--user-profile-tab-hover': 'var(--text)',
+    '--user-profile-button-save': '#4B4CE3',
+    '--user-profile-button-text': 'var(--text)',
+    '--user-profile-button-cancel-border': 'var(--text)',
+    '--user-profile-button-cancel-text': 'var(--text)',
+    '--user-profile-button-save-text': '#fff',
   },
 };
 
@@ -153,6 +164,17 @@ export const GRAPHITE: ThemeConfig = {
 
     '--settings-select-border': '#fff',
     '--settings-border': '#8A8A8A',
+
+    '--user-profile-label-text': '#fff',
+    '--user-profile-input-hover': '#fff',
+    '--user-profile-input-border': '#fff',
+    '--user-profile-active-tab': '#4B4CE3',
+    '--user-profile-tab-hover': '#fff',
+    '--user-profile-button-save': '#4B4CE3',
+    '--user-profile-button-text': '#fff',
+    '--user-profile-button-cancel-border': '#fff',
+    '--user-profile-button-cancel-text': '#fff',
+    '--user-profile-button-save-text': '#fff',
   },
 };
 
@@ -209,6 +231,17 @@ export const EXOSTEEL: ThemeConfig = {
 
     '--settings-select-border': '#fff',
     '--settings-border': '#8A8A8A',
+
+    '--user-profile-label-text': '#fff',
+    '--user-profile-input-hover': '#fff',
+    '--user-profile-input-border': '#fff',
+    '--user-profile-active-tab': '#283248',
+    '--user-profile-tab-hover': '#fff',
+    '--user-profile-button-save': '#4B4CE3',
+    '--user-profile-button-text': '#fff',
+    '--user-profile-button-cancel-border': '#fff',
+    '--user-profile-button-cancel-text': '#fff',
+    '--user-profile-button-save-text': '#fff',
   },
 };
 
@@ -265,6 +298,17 @@ export const JADEUS: ThemeConfig = {
 
     '--settings-select-border': '#fff',
     '--settings-border': '#8A8A8A',
+
+    '--user-profile-label-text': '#fff',
+    '--user-profile-input-hover': '#fff',
+    '--user-profile-input-border': '#fff',
+    '--user-profile-active-tab': '#009760',
+    '--user-profile-tab-hover': '#fff',
+    '--user-profile-button-save': '#4B4CE3',
+    '--user-profile-button-text': '#fff',
+    '--user-profile-button-cancel-border': '#fff',
+    '--user-profile-button-cancel-text': '#fff',
+    '--user-profile-button-save-text': '#fff',
   },
 };
 
@@ -320,5 +364,16 @@ export const ONYX: ThemeConfig = {
 
     '--settings-select-border': '#fff',
     '--settings-border': '#8A8A8A',
+
+    '--user-profile-label-text': '#fff',
+    '--user-profile-input-hover': '#fff',
+    '--user-profile-input-border': '#fff',
+    '--user-profile-active-tab': '#4B4CE3',
+    '--user-profile-tab-hover': '#fff',
+    '--user-profile-button-save': '#4B4CE3',
+    '--user-profile-button-text': '#fff',
+    '--user-profile-button-cancel-border': '#fff',
+    '--user-profile-button-cancel-text': '#fff',
+    '--user-profile-button-save-text': '#fff',
   },
 };

@@ -13,11 +13,12 @@ import {
 import { MenuModule } from 'primeng/menu';
 import { PopoverModule } from 'primeng/popover';
 import { SelectModule } from 'primeng/select';
+import { UserProfile } from '../user-profile/user-profile';
 
 @Component({
   selector: 'ui-cmp-secondary-sidebar',
   standalone: true,
-  imports: [MenuModule, FormsModule, TranslatePipe, PopoverModule, SelectModule],
+  imports: [MenuModule, FormsModule, TranslatePipe, PopoverModule, SelectModule, UserProfile],
   templateUrl: './secondary-sidebar.html',
   styleUrl: './secondary-sidebar.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -25,6 +26,8 @@ import { SelectModule } from 'primeng/select';
 export class SecondarySidebar {
   themeService = inject(ThemeService);
   private translation = inject(TranslationService);
+
+  showUserProfile = false;
 
   companies = [
     {
@@ -104,8 +107,8 @@ export class SecondarySidebar {
   selectedCompany = 'bolo';
   selectedLanguage = 'en';
   selectedDateFormat = 'mm-dd-yyyy';
-  selectedThemeColor: any;
-  selectedAccentColor: any;
+  selectedThemeColor: string | undefined;
+  selectedAccentColor: string | undefined;
 
   items = [
     { label: 'secondary.menu.newConversation', icon: 'new-conversation-icon.svg' },
@@ -145,5 +148,9 @@ export class SecondarySidebar {
       default:
         return lng;
     }
+  }
+
+  onUserProfileClick() {
+    this.showUserProfile = !this.showUserProfile;
   }
 }

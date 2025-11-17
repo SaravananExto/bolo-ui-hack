@@ -7,6 +7,16 @@
   padding-block: 24px;
   align-items: center;
   gap: 18px;
+  padding-inline: 24px;
+  transition: width 0.3s ease;
+
+  &.expanded {
+    width: 350px;
+  }
+
+  &.collapse {
+    width: 74px;
+  }
 }
 
 /* USER SECTION */
@@ -18,6 +28,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 60px;
+  cursor: pointer;
 }
 
 .chat-sidebar__user-avatar {
@@ -196,5 +207,33 @@
     background: var(--settings-footer-text);
     border: none;
     margin: 0;
+  }
+}
+
+.chat-sidebar__footer-controls {
+  align-self: flex-start;
+}
+
+.chat-sidebar__footer-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.chat-sidebar__profile-panel {
+  flex-grow: 1;
+  width: 350px;
+  animation: sidebarExpand 0.35s ease forwards;
+}
+
+@keyframes sidebarExpand {
+  0% {
+    width: 150px;
+  }
+  50% {
+    width: 250px;
+  }
+  100% {
+    width: 350px;
   }
 }

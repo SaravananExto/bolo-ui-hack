@@ -1,5 +1,12 @@
 <nav class="chat-sidebar" [class.chat-sidebar--collapsed]="collapsed()">
-  <div class="chat-sidebar__header">
+  <div
+    class="chat-sidebar__header"
+    (click)="onLogoClick()"
+    (keyup.enter)="onLogoClick()"
+    tabindex="0"
+    role="button"
+    aria-label="App logo"
+  >
     <img
       alt="App logo"
       [src]="collapsed() ? 'assets/images/intel-small.png' : 'assets/images/intel-large.png'"
@@ -18,7 +25,15 @@
     }
 
     <div class="chat-sidebar__option">
-      <img alt="New Conversation" src="assets/icons/new-conversation-icon.svg" />
+      <button
+        type="button"
+        class="chat-sidebar__icon-button"
+        (click)="onNewConversationClick()"
+        (keyup.enter)="onNewConversationClick()"
+        aria-label="{{ 'sidebar.newConversation' | translate }}"
+      >
+        <img alt="New Conversation" src="assets/icons/new-conversation-icon.svg" />
+      </button>
       <span class="chat-sidebar__option-text">{{ 'sidebar.newConversation' | translate }}</span>
     </div>
 
@@ -47,7 +62,7 @@
           (click)="onHistoryClick()"
           (keyup.enter)="onHistoryClick()"
         >
-          <p class="chat-history__message">{{ 'sidebar.exampleMessage' | translate }}</p>
+          <p class="chat-history__message">How many records are there in the exto database?</p>
           <button class="chat-history__menu-button" (click)="menu.toggle($event)">
             <img alt="More options" src="assets/icons/ellipses-icon.svg" />
           </button>

@@ -1,8 +1,24 @@
-<nav class="chat-sidebar">
-  <div class="chat-sidebar__user">
+<nav class="chat-sidebar" [class]="showUserProfile ? 'expanded' : 'collapse'">
+  <div
+    class="chat-sidebar__user"
+    (click)="onUserProfileClick()"
+    (keyup.enter)="onUserProfileClick()"
+    tabindex="0"
+    role="button"
+    aria-label="Open user profile"
+  >
     <p class="chat-sidebar__user-avatar">SH</p>
   </div>
 
+  @if(showUserProfile) {
+  <ui-cmp-user-profile class="chat-sidebar__profile-panel"></ui-cmp-user-profile>
+  <div class="chat-sidebar__footer-controls">
+    <button class="chat-sidebar__footer-button" (click)="onUserProfileClick()">
+      <img alt="Expand" src="assets/icons/expand-icon.svg" class="chat-sidebar__footer-icon" />
+    </button>
+  </div>
+
+  } @if(!showUserProfile) {
   <div class="chat-sidebar__menu">
     <button class="chat-sidebar__menu-button" (click)="menu.toggle($event)">
       <img alt="More Options" src="assets/icons/ellipses-icon.svg" />
@@ -14,6 +30,7 @@
       <img alt="Settings" src="assets/icons/settings-icon.svg" />
     </button>
   </div>
+  }
 </nav>
 
 <p-menu #menu [model]="items" [popup]="true" styleClass="chat-sidebar__menu-dropdown">
@@ -80,7 +97,7 @@
           [options]="themeColors"
           [(ngModel)]="selectedThemeColor"
           [placeholder]="'user_profile.settings.theme_color' | translate"
-          (onClick)="changeTheme(selectedThemeColor)"
+          (onClick)="changeTheme(selectedThemeColor!)"
         />
       </div>
 

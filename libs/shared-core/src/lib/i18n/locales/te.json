@@ -56,5 +56,18 @@
   "user_profile.settings.privacy": "గోప్యత",
   "user_profile.settings.support": "సహాయం",
   "job_status.title": "ఉద్యోగ స్థితి",
-  "document_manager.title": "డాక్యుమెంట్ మేనేజర్"
+  "document_manager.title": "డాక్యుమెంట్ మేనేజర్",
+  "user_profile.first_name": "మొదటి పేరు",
+  "user_profile.last_name": "చివరి పేరు",
+  "user_profile.user_name": "వినియోగదారు పేరు",
+  "user_profile.email": "ఇమెయిల్",
+  "user_profile.user_role": "వినియోగదారు పాత్ర",
+  "user_profile.work_phone": "పని ఫోన్",
+  "user_profile.actions.cancel": "రద్దు చేయండి",
+  "user_profile.actions.save": "సేవ్ చేయండి",
+  "user_profile.change_password.old": "పాత పాస్వర్డ్",
+  "user_profile.change_password.new": "కొత్త పాస్వర్డ్",
+  "user_profile.change_password.retype": "కొత్త పాస్వర్డ్ మళ్లీ టైప్ చేయండి",
+  "user_profile.tabs.account": "వినియోగదారు ఖాతా",
+  "user_profile.tabs.change_password": "పాస్వర్డ్ మార్చండి"
 }
