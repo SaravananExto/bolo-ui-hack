@@ -3,10 +3,9 @@ import { Router, RouterModule } from '@angular/router';
 import { ThemeService } from '@bolo/shared-core/theme/services/theme.service';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { MenuDock, PrimarySidebar, SecondarySidebar } from '@bolo/ui/components';
-import { Configuration } from '@bolo/ui/components/configuration/configuration';
 
 @Component({
-  imports: [RouterModule, PrimarySidebar, SecondarySidebar, MenuDock, Configuration],
+  imports: [RouterModule, PrimarySidebar, SecondarySidebar, MenuDock],
   standalone: true,
   selector: 'app-layout',
   templateUrl: './layout.html',
@@ -32,10 +31,11 @@ export class Layout implements OnInit {
   }
 
   onHistoryClicked(event: string) {
-    this.router.navigate(['chat', 'history', `${event}`]);
+    this.router.navigate(['chat', `${event}`]);
   }
 
   navigateTo(event: string) {
+    console.log('navigating to ', event);
     this.router.navigate([event]);
   }
 

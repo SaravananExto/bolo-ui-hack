@@ -7,16 +7,16 @@ export const appRoutes: Routes = [
     loadComponent: () => import('@bolo/ui/components/login/login').then(m => m.Login),
   },
   {
-    path: 'chat',
+    path: '',
     loadComponent: () => import('./layout/layout').then(m => m.Layout),
     children: [
       {
-        path: '',
+        path: 'chat',
         loadComponent: () =>
           import('@bolo/ui/components/chat-window/chat-window').then(c => c.ChatWindow),
       },
       {
-        path: 'history/:view',
+        path: 'chat/:view',
         loadComponent: () =>
           import('@bolo/ui/components/chat-window/chat-window').then(c => c.ChatWindow),
       },

@@ -27,33 +27,36 @@ export class MenuDock {
     {
       label: 'Configuration',
       icon: 'assets/icons/configuration-icon.svg',
+      command: () => {
+        this.navigateTo.emit('configuration');
+      },
     },
     {
       label: 'Datasets',
       icon: 'assets/icons/datasets-icon.svg',
       command: () => {
-        this.navigateTo.emit('chat/datasets');
+        this.navigateTo.emit('datasets');
       },
     },
     {
       label: 'Jobs',
       icon: 'assets/icons/job-status-icon.svg',
       command: () => {
-        this.navigateTo.emit('chat/job-status');
+        this.navigateTo.emit('job-status');
       },
     },
     {
       label: 'Document Learning',
       icon: 'assets/icons/document-learning-icon.svg',
       command: () => {
-        this.navigateTo.emit('chat/document-learning');
+        this.navigateTo.emit('document-learning');
       },
     },
     {
       label: 'Document Manager',
       icon: 'assets/icons/document-manager-icon.svg',
       command: () => {
-        this.navigateTo.emit('chat/document-manager');
+        this.navigateTo.emit('document-manager');
       },
     },
   ];

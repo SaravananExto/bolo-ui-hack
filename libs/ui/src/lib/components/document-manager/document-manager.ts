@@ -2,13 +2,14 @@ import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/cor
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@bolo/shared-core/i18n/pipes';
 import { TranslationService } from '@bolo/shared-core/i18n/services';
-import { TableComponent } from '@bolo/ui/elements';
 import { MenuItem } from 'primeng/api';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { Tooltip } from 'primeng/tooltip';
 
+import { TableComponent } from '../../elements/table/table-component';
+
 @Component({
-  selector: 'lib-document-manager',
+  selector: 'ui-cmp-document-manager',
   imports: [TranslatePipe, BreadcrumbModule, Tooltip, TableComponent],
   templateUrl: './document-manager.html',
   styleUrl: './document-manager.scss',
@@ -25,7 +26,7 @@ export class DocumentManager implements OnInit {
     this.breadCrumbItems.push({
       label: 'All Folders',
       icon: '',
-      url: '/chat/document-manager',
+      url: '/document-manager',
       target: '_self',
     });
   }

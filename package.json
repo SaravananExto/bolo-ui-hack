@@ -5,7 +5,7 @@
   "scripts": {
     "prepare": "husky install",
     "lint:all": "nx run-many --target=lint --all",
-    "dev": "nx serve web",
+    "start": "nx serve web",
     "lint": "nx lint",
     "lint:fix": "nx lint --fix",
     "test": "nx test"
@@ -41,7 +41,7 @@
     "@nx/devkit": "22.0.2",
     "@nx/eslint": "22.0.2",
     "@nx/eslint-plugin": "22.0.2",
-    "@nx/jest": "22.0.2",
+    "@nx/jest": "^21.2.4",
     "@nx/js": "22.0.3",
     "@nx/playwright": "22.0.2",
     "@nx/web": "22.0.2",
@@ -86,5 +86,8 @@
     "*.{js,json,md}": [
       "prettier --write"
     ]
+  },
+  "overrides": {
+    "glob": "^12.0.0"
   }
 }
