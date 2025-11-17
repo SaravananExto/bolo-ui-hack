@@ -1,12 +1,10 @@
 @use 'libs/shared-core/src/lib/theme/styles/_variables.scss' as theme;
 
 .configuration-panel {
+  height: 100%;
   background: var(--color-bg, #272727);
   color: var(--color-text, #fff);
   padding: 2rem;
-  border-radius: 18px;
-  max-width: 2264px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +34,25 @@
   justify-content: center;
 }
 
-.configuration-tabs {
+:host ::ng-deep .configuration-tabs {
+  background: none;
+
+  .p-tablist {
+    background: none;
+  }
+
+  .p-ink {
+    background: none;
+  }
+
+  .p-tablist-tab-list {
+    justify-content: center;
+  }
+
+  .p-tabpanels {
+    background: none;
+  }
+
   width: 100%;
   .p-tabview-nav {
     background: var(--color-bg, #272727);
@@ -50,10 +66,16 @@
       border: none;
       border-radius: 8px 8px 0 0;
       &:focus {
-        outline: 2px solid var(--color-primary, #4468FD);
+        outline: 2px solid var(--color-primary, #4468fd);
       }
     }
   }
+}
+
+.general-tab-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 @media (max-width: 900px) {

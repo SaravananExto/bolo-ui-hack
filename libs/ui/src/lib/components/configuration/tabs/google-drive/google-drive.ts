@@ -9,6 +9,7 @@ import { ActionBar } from '../action-bar/action-bar';
   standalone: true,
   imports: [ButtonModule, TranslatePipe, ActionBar],
   templateUrl: './google-drive.html',
+  styleUrl: './google-drive.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GoogleDriveTab {}
