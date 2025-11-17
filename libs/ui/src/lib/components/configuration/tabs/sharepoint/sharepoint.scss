@@ -1,0 +1,33 @@
+.sharepoint-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.sharepoint-label {
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  color: #222;
+}
+
+.sharepoint-add-btn {
+  width: 218px;
+  height: 40px;
+  border-radius: 10px;
+  background: #4468FD;
+  border: 1px solid #4468FD;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover,
+  &:focus {
+    background: #2746b3;
+    outline: none;
+  }
+}

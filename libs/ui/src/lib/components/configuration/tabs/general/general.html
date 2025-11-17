@@ -1,0 +1,56 @@
+<ui-cmp-action-bar></ui-cmp-action-bar>
+<form [formGroup]="form" class="general-tab-grid">
+  <div class="general-tab-row">
+    <p-select
+      [options]="datasourceOptions"
+      optionLabel="label"
+      optionValue="value"
+      formControlName="selectedDatasource"
+      [placeholder]="'configuration.datasource' | translate"
+      aria-label="{{ 'configuration.datasource' | translate }}"
+      class="general-dropdown"
+    ></p-select>
+    <p-select
+      [options]="llmOptions"
+      optionLabel="label"
+      optionValue="value"
+      formControlName="selectedLLM"
+      [placeholder]="'configuration.llmModel' | translate"
+      aria-label="{{ 'configuration.llmModel' | translate }}"
+      class="general-dropdown"
+    ></p-select>
+  </div>
+  <div class="general-tab-checkboxes">
+    @for (key of configCheckboxes; track key) {
+      <div class="general-checkbox-row">
+        <p-checkbox
+          formControlName="{{ key }}"
+          binary="true"
+          inputId="{{ key }}"
+          aria-label="{{ key | translate }}"
+        ></p-checkbox>
+        <label [for]="key" class="general-checkbox-label">{{ key | translate }}</label>
+      </div>
+    }
+  </div>
+  <div class="general-tab-logo">
+    <label for="logo-source" class="general-logo-label">{{ 'configuration.logoSource' | translate }}</label>
+    <input
+      pInputText
+      id="logo-source"
+      class="general-logo-input"
+      type="text"
+      formControlName="logoSource"
+      [placeholder]="'/intel-logo/intel-logo.png'"
+      aria-label="{{ 'configuration.logoSource' | translate }}"
+    />
+    <div class="general-logo-checkbox">
+      <p-checkbox
+        formControlName="showInSidebar"
+        binary="true"
+        inputId="show-sidebar"
+        aria-label="{{ 'configuration.showInSidebar' | translate }}"
+      ></p-checkbox>
+      <label for="show-sidebar" class="general-checkbox-label">{{ 'configuration.showInSidebar' | translate }}</label>
+    </div>
+  </div>

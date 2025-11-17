@@ -1,0 +1,93 @@
+.general-tab-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.general-tab-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.general-dropdown,
+p-select.general-dropdown {
+  background: #fff;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  border-radius: 10px;
+  min-width: 220px;
+  height: 40px;
+  border: 1px solid #aaa;
+  box-shadow: none;
+  outline: none;
+}
+
+.general-tab-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.general-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.general-checkbox-label {
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  color: #222;
+}
+
+.general-tab-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.general-logo-label {
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  color: #222;
+}
+
+.general-logo-input {
+  width: 340px;
+  height: 40px;
+  border-radius: 18px;
+  border: 1px solid #AAAAAA;
+  font-size: 19px;
+  font-family: Arial, sans-serif;
+  padding: 0 1rem;
+  background: #fff;
+  color: #222;
+}
+
+.general-logo-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .general-tab-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .general-tab-checkboxes {
+    grid-template-columns: 1fr;
+  }
+  .general-logo-input {
+    width: 100%;
+    min-width: 180px;
+  }
+}

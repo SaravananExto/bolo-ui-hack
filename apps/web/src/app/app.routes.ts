@@ -36,6 +36,11 @@ export const appRoutes: Routes = [
         path: 'document-manager',
         loadComponent: () => import('@bolo/ui/components').then(m => m.DocumentManager),
       },
+      {
+        path: 'configuration',
+        loadComponent: () =>
+          import('@bolo/ui/components/configuration/configuration').then(m => m.Configuration),
+      },
     ],
   },
   { path: '**', loadComponent: () => import('@bolo/ui/components').then(c => c.NotFound) },
